@@ -136,11 +136,11 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_b), spawn $ "brave" )
   , ((modMask, xK_c), spawn $ "conky-toggle" )
   , ((modMask, xK_f), sendMessage $ Toggle NBFULL)
-  , ((modMask, xK_h), spawn $ "urxvt 'htop task manager' -e htop" )
+  , ((modMask, xK_h), spawn $ "alacritty 'htop task manager' -e htop" )
   , ((modMask, xK_m), spawn $ "pragha" )
   , ((modMask, xK_q), kill )
   , ((modMask, xK_r), spawn $ "rofi-theme-selector" )
-  , ((modMask, xK_t), spawn $ "urxvt" )
+  , ((modMask, xK_t), spawn $ "alacritty" )
   , ((modMask, xK_v), spawn $ "pavucontrol" )
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "arcolinux-logout" )
@@ -164,7 +164,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- SUPER + SHIFT KEYS
 
-  , ((modMask .|. shiftMask , xK_Return ), spawn $ "urxvt" )
+  , ((modMask .|. shiftMask , xK_Return ), spawn $ "alacritty" )
   , ((modMask .|. shiftMask , xK_d ), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
   , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
   , ((modMask .|. shiftMask , xK_q ), kill)
@@ -188,11 +188,11 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((controlMask .|. mod1Mask , xK_p ), spawn $ "pamac-manager")
   , ((controlMask .|. mod1Mask , xK_r ), spawn $ "rofi-theme-selector")
   , ((controlMask .|. mod1Mask , xK_s ), spawn $ "spotify")
-  , ((controlMask .|. mod1Mask , xK_t ), spawn $ "urxvt")
+  , ((controlMask .|. mod1Mask , xK_t ), spawn $ "alacritty")
   , ((controlMask .|. mod1Mask , xK_u ), spawn $ "pavucontrol")
   , ((controlMask .|. mod1Mask , xK_v ), spawn $ "vivaldi-stable")
   , ((controlMask .|. mod1Mask , xK_w ), spawn $ "arcolinux-welcome-app")
-  , ((controlMask .|. mod1Mask , xK_Return ), spawn $ "urxvt")
+  , ((controlMask .|. mod1Mask , xK_Return ), spawn $ "alacritty")
 
   -- ALT + ... KEYS
 
