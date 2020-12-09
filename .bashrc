@@ -223,4 +223,3 @@ ex ()
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 neofetch
-alias config='/usr/bin/git --git-dir=/home/callum/.cfg/ --work-tree=/home/callum'
