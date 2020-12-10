@@ -6,5 +6,8 @@ end
 # Alias for dotfiles bare git repo. Used as a backup for my dotfiles.
 alias config='/usr/bin/git --git-dir=/home/callum/.cfg/ --work-tree=/home/callum'
 
+# Standard alias'.
+alias ll='ls -al'
+
 # Enable the starship cross-shell prompt.
 starship init fish | source
