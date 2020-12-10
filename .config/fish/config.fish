@@ -1,3 +1,3 @@
 alias config='/usr/bin/git --git-dir=/home/callum/.cfg/ --work-tree=/home/callum'
 
-eval "$(starship init bash)"
+starship init fish | source
