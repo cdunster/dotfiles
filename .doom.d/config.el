@@ -52,3 +52,11 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Set a custom template for the default org-roam capture.
+(setq org-roam-capture-templates
+            '(("d" "default" plain (function org-roam--capture-get-point)
+               "%?"
+               :file-name "%<%Y%m%d%H%M%S>-${slug}"
+               :head "#+title: ${title}\n#+roam_alias:\n#+created: %u\n\n* ${title}\n"
+               :unnarrowed t)))
