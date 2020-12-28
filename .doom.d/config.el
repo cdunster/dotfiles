@@ -57,6 +57,6 @@
 (setq org-roam-capture-templates
             '(("d" "default" plain (function org-roam--capture-get-point)
                "%?"
-               :file-name "%<%Y%m%d%H%M%S>-${slug}"
+               :file-name "${slug}"
                :head "#+title: ${title}\n#+roam_alias:\n#+created: %u\n\n* ${title}\n"
                :unnarrowed t)))
