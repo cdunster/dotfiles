@@ -1529,7 +1529,7 @@ interval = 1
 ;   %mb_used%
 ;   %mb_free%
 ;   %mb_total%
-label = %percentage_used:3%%
+label = %percentage_used:02%%
 
 format = <label>
 format-prefix = "  "
