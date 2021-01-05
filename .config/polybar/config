@@ -1367,11 +1367,12 @@ label-monitor = %name%
 label-active = %name%
 label-active-foreground = ${colors.foreground}
 label-active-background = ${colors.background}
-label-active-underline= #6790eb
+label-active-underline= #FF6790eb
 label-active-padding = 2
 
 label-occupied = %name%
 label-occupied-background = ${colors.background}
+label-occupied-underline= #806790eb
 label-occupied-padding = 2
 
 label-urgent = %name%
