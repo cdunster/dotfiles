@@ -265,7 +265,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((mod1Mask, xK_Tab), nextWS)
 
   --Focus selected desktop
-  , ((modMask, xK_Tab), nextWS)
+  , ((modMask, xK_Tab), toggleWS)
 
   --Focus selected desktop
   , ((controlMask .|. mod1Mask , xK_Left ), prevWS)
