@@ -336,8 +336,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   ++
   -- ctrl-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3
   -- ctrl-shift-{w,e,r}, Move client to screen 1, 2, or 3
-  [((m .|. controlMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
-      | (key, sc) <- zip [xK_q, xK_e] [0..]
+  [((m .|. mod1Mask, key), screenWorkspace sc >>= flip whenJust (windows . f))
+      | (key, sc) <- zip [xK_1,xK_2,xK_3,xK_4,xK_5,xK_6,xK_7,xK_8,xK_9,xK_0] [0..]
       , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
