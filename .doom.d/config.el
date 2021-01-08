@@ -35,6 +35,11 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
 
+;; Disable the threshold for how many files the LSP will watch.
+(setq lsp-file-watch-threshold nil)
+
+;; Set the directory Projectile will search for projects.
+(setq projectile-project-search-path '("~/repos/"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -55,7 +60,7 @@
 
 ;; Set a custom template for the default org-roam capture.
 (setq org-roam-capture-templates
-            '(("d" "default" plain (function org-roam--capture-get-point)
+            '(("d" "default" plain (function org-roam-capture--get-point)
                "%?"
                :file-name "${slug}"
                :head "#+title: ${title}\n#+roam_alias:\n#+roam_tags:\n#+created: %u\n\n* ${title}\n"
