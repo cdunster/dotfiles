@@ -135,6 +135,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   [ ((modMask, xK_e), spawn $ "emacs" )
   , ((modMask, xK_b), spawn $ "brave" )
   , ((modMask, xK_s), spawn $ "slack" )
+  , ((modMask, xK_l), spawn $ "betterlockscreen -l dimblur" )
   , ((modMask, xK_c), spawn $ "conky-toggle" )
   , ((modMask, xK_f), sendMessage $ Toggle NBFULL)
   , ((modMask, xK_h), spawn $ "alacritty 'htop task manager' -e htop" )
