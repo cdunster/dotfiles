@@ -60,6 +60,6 @@ unclutter &
 
 #run telegram-desktop &
 #run discord &
-#run dropbox &
+run dropbox &
 #run insync start &
 #run ckb-next -b &
