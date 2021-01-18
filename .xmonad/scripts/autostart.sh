@@ -43,11 +43,11 @@ run pamac-tray &
 # run xfce4-power-manager &
 # run volumeicon &
 # numlockx on &
-blueberry-tray &
-picom --config $HOME/.xmonad/scripts/picom.conf &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
-unclutter &
+run blueberry-tray &
+run picom --config $HOME/.xmonad/scripts/picom.conf &
+run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+run /usr/lib/xfce4/notifyd/xfce4-notifyd &
+run unclutter &
 
 #starting user applications at boot time
 #nitrogen --restore &
