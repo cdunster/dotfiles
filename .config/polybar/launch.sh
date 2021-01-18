@@ -95,8 +95,13 @@ case $desktop in
       m=$(xrandr --query | grep " connected" | cut -d" " -f1)
       MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
     else
-      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-        MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+      # Load primary monitor.
+      m=$(xrandr --query | grep " connected" | grep "primary" | cut -d" " -f1)
+      MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+
+      # Load secondary monitors.
+      for m in $(xrandr --query | grep " connected" | grep -v "primary" | cut -d" " -f1); do
+        MONITOR=$m polybar --reload mainbar-xmonad-second -c ~/.config/polybar/config &
       done
     fi
     # second polybar at bottom
