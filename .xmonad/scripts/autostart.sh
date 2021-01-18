@@ -37,12 +37,12 @@ feh --bg-fill $HOME/Wallpapers/pacwall.png &
 # (conky -c $HOME/.xmonad/scripts/system-overview) &
 
 #starting utility applications at boot time
-run variety &
+# run variety &
 run nm-applet &
 run pamac-tray &
-run xfce4-power-manager &
-run volumeicon &
-numlockx on &
+# run xfce4-power-manager &
+# run volumeicon &
+# numlockx on &
 blueberry-tray &
 picom --config $HOME/.xmonad/scripts/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
