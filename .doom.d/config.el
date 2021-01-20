@@ -66,4 +66,6 @@
                :head "#+title: ${title}\n#+roam_alias:\n#+roam_tags:\n#+created: %u\n\n* ${title}\n"
                :unnarrowed t)))
 
+(map! :desc "Open calendar view" :leader "o c" '=calendar)
+
 (load! "gcal.el")
