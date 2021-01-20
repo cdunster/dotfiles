@@ -65,3 +65,5 @@
                :file-name "${slug}"
                :head "#+title: ${title}\n#+roam_alias:\n#+roam_tags:\n#+created: %u\n\n* ${title}\n"
                :unnarrowed t)))
+
+(load! "gcal.el")
