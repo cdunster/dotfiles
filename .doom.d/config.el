@@ -66,6 +66,7 @@
                :head "#+title: ${title}\n#+roam_alias:\n#+roam_tags:\n#+created: %u\n\n* ${title}\n"
                :unnarrowed t)))
 
+;; Set custom keymap to open the calendar view.
 (map! :desc "Open calendar view" :leader "o c" '=calendar)
-
+;; Load the org-gcal config, this file has client secret in it.
 (load! "gcal.el")
