@@ -70,3 +70,15 @@
 (map! :desc "Open calendar view" :leader "o c" '=calendar)
 ;; Load the org-gcal config, this file has client secret in it.
 (load! "gcal.el")
+
+;; Rust custom function for running the cargo alias 'test-on-host'.
+(defun rustic-cargo-test-on-host()
+  "Run 'cargo test-on-host' for the current project. This is a custom cargo alias."
+  (interactive)
+  (rustic-run-cargo-command "cargo test-on-host"))
+
+;; Rust mode custom keymaps.
+(map! (:when (featurep! :lang rust)
+       (:map rustic-mode-map :desc "cargo add" :localleader "a" 'rustic-cargo-add)
+       (:map rustic-mode-map :desc "cargo test-on-host" :localleader "t h" 'rustic-cargo-test-on-host)
+       ))
