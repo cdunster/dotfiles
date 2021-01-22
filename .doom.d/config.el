@@ -82,3 +82,6 @@
        (:map rustic-mode-map :desc "cargo add" :localleader "a" 'rustic-cargo-add)
        (:map rustic-mode-map :desc "cargo test-on-host" :localleader "t h" 'rustic-cargo-test-on-host)
        ))
+
+;; Enable format-on-save for Rust mode.
+(add-hook 'rustic-mode-hook 'format-all-mode)
