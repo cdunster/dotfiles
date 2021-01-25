@@ -77,10 +77,17 @@
   (interactive)
   (rustic-run-cargo-command "cargo test-on-host"))
 
+;; Rust custom function for running the cargo alias 'run-sim'.
+(defun rustic-cargo-run-sim()
+  "Run 'cargo run-sim' for the current project. This is a custom cargo alias."
+  (interactive)
+  (rustic-run-cargo-command "cargo run-sim"))
+
 ;; Rust mode custom keymaps.
 (map! (:when (featurep! :lang rust)
        (:map rustic-mode-map :desc "cargo add" :localleader "a" 'rustic-cargo-add)
        (:map rustic-mode-map :desc "cargo test-on-host" :localleader "t h" 'rustic-cargo-test-on-host)
+       (:map rustic-mode-map :desc "cargo run-sim" :localleader "b s" 'rustic-cargo-run-sim)
        ))
 
 ;; Enable format-on-save for Rust mode.
