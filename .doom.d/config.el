@@ -71,23 +71,16 @@
 ;; Load the org-gcal config, this file has client secret in it.
 (load! "gcal.el")
 
-;; Rust custom function for running the cargo alias 'test-on-host'.
-(defun rustic-cargo-test-on-host()
-  "Run 'cargo test-on-host' for the current project. This is a custom cargo alias."
+;; Rust mode function for running a cargo command, useful for running cargo alias'.
+(defun rustic-cargo-command()
+  "Run 'cargo <command>' for the current project. Where <command> is prompted for."
   (interactive)
-  (rustic-run-cargo-command "cargo test-on-host"))
-
-;; Rust custom function for running the cargo alias 'run-sim'.
-(defun rustic-cargo-run-sim()
-  "Run 'cargo run-sim' for the current project. This is a custom cargo alias."
-  (interactive)
-  (rustic-run-cargo-command "cargo run-sim"))
+  (rustic-run-cargo-command (concat "cargo " (read-string "cargo "))))
 
 ;; Rust mode custom keymaps.
 (map! (:when (featurep! :lang rust)
        (:map rustic-mode-map :desc "cargo add" :localleader "a" 'rustic-cargo-add)
-       (:map rustic-mode-map :desc "cargo test-on-host" :localleader "t h" 'rustic-cargo-test-on-host)
-       (:map rustic-mode-map :desc "cargo run-sim" :localleader "b s" 'rustic-cargo-run-sim)
+       (:map rustic-mode-map :desc "cargo ..." :localleader "c" 'rustic-cargo-command)
        ))
 
 ;; Enable format-on-save for Rust mode.
