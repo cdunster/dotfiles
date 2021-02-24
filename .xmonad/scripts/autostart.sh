@@ -20,7 +20,7 @@ function run {
 # Detect the display profile and setup the displays.
 autorandr -c
 
-(sleep 2; run $HOME/.config/polybar/launch.sh) &
+run $HOME/.config/polybar/launch.sh &
 
 #change your keyboard if you need it
 #setxkbmap -layout be
