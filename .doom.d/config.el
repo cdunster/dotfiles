@@ -85,3 +85,6 @@
 
 ;; Enable format-on-save for Rust mode.
 (add-hook 'rustic-mode-hook 'format-all-mode)
+
+;; When exit insert mode, don't move the cursor back one character.
+(setq evil-move-cursor-back nil)
