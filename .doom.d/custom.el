@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(magit-clone-default-directory "~/repos/")
  '(projectile-track-known-projects-automatically nil)
- '(system-time-locale "C"))
+ '(system-time-locale "C" t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
