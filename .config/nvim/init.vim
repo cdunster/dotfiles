@@ -1,14 +1,3 @@
-"{{{ Neovim settings.
-set ignorecase	        	"Enable case insensitive matching.
-set tabstop=4	        	"Size of a tab.
-set softtabstop=4	        "See multiple spaces as a tab.
-set expandtab	        	"Converts tabs to spaces.
-set shiftwidth=4            "Autoindented width.
-set number                  "Enable line numbers.
-set wildmode=longest,list   "Enable bash-like tab completions.
-set foldmethod=marker       "Define folds with three braces in a comment.
-filetype plugin indent on   "Enable auto-indenting depending on file type.
-"}}}
 "{{{ Plugins
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -17,6 +6,9 @@ Plug 'voldikss/vim-floaterm'
 
 "Code completion.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"Colour scheme
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 "}}}
@@ -206,4 +198,24 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "}}}
 
 "}}}
+"{{{ Neovim settings.
+set ignorecase	        	"Enable case insensitive matching.
+set tabstop=4	        	"Size of a tab.
+set softtabstop=4	        "See multiple spaces as a tab.
+set expandtab	        	"Converts tabs to spaces.
+set shiftwidth=4            "Autoindented width.
+set number                  "Enable line numbers.
+set wildmode=longest,list   "Enable bash-like tab completions.
+set foldmethod=marker       "Define folds with three braces in a comment.
+set termguicolors
 
+"Colour scheme.
+colorscheme onehalfdark
+syntax on
+set t_Co=256
+set cursorline
+"Enable one of the lines below when airline or lightline is added.
+" let g:airline_theme='onehalfdark'
+" let g:lightline = { 'colorscheme': 'onehalfdark' }
+
+"}}}
