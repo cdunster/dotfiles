@@ -4,7 +4,7 @@ function fish_user_key_bindings
 end
 
 # Set the default terminal editor to be vim.
-set -gx EDITOR vim
+set -gx EDITOR nvim
 
 # Enable the starship cross-shell prompt.
 starship init fish | source
