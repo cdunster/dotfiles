@@ -140,6 +140,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_f), sendMessage $ Toggle NBFULL)
   , ((modMask, xK_h), spawn $ "alacritty 'htop task manager' -e htop" )
   , ((modMask, xK_m), spawn $ "thunderbird" )
+  , ((modMask, xK_n), spawn $ "neovide" )
   , ((modMask, xK_p), spawn $ "spotify" )
   , ((modMask, xK_q), kill )
   , ((modMask, xK_r), spawn $ "rofi-theme-selector" )
