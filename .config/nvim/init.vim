@@ -18,11 +18,21 @@ Plug 'voldikss/vim-floaterm'
 call plug#end()
 "}}}
 "{{{ Keybinding
-nnoremap <SPACE> <Nop>      "Un-map the SPC key from move right in normal mode.
-let g:mapleader=' '         "Set SPC to the leader key for custom commands.
 
+"Un-map the SPC key from move right in normal mode.
+nnoremap <SPACE> <Nop>
+
+"Set SPC to the leader key for custom commands.
+let g:mapleader=' '
+
+"Write the current file.
 nnoremap <leader>w :w<CR>
+
+"Quit the current window. Closes neovim if all windows are closed.
 nnoremap <leader>q :q<CR>
+
+"Toggle the current fold with TAB.
 nnoremap <TAB> za
+
 "}}}
 
