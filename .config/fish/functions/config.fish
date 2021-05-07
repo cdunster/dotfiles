@@ -1,3 +1,3 @@
 function config
-    git --git-dir=$HOME/.cfg/ --work-tree=$HOME $argv
+    lazygit -g $HOME/.cfg/ -w $HOME
 end
