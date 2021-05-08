@@ -11,22 +11,30 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Colour scheme
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
+"Which Key.
+Plug 'liuchengxu/vim-which-key'
+
 call plug#end()
 
 "}}}
 "{{{ Keybinding
 
-"Un-map the SPC key from move right in normal mode.
-nnoremap <SPACE> <Nop>
-
 "Set SPC to the leader key for custom commands.
 let g:mapleader=' '
 
+"Setup Which Key.
+call which_key#register('<Space>', "g:which_key_map")
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
+let g:which_key_map =  {}
+
 "Write the current file.
-nnoremap <leader>w :w<CR>
+nnoremap <silent> <leader>w :w<CR>
+let g:which_key_map.w = 'Write current file'
 
 "Quit the current window. Closes neovim if all windows are closed.
-nnoremap <leader>q :q<CR>
+nnoremap <silent> <leader>q :q<CR>
+let g:which_key_map.q = 'Quit current window'
 
 "Toggle the current fold with TAB.
 nnoremap <TAB> za
