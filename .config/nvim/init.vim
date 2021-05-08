@@ -39,6 +39,11 @@ let g:which_key_map.q = 'Quit current window'
 "Toggle the current fold with TAB.
 nnoremap <TAB> za
 
+let g:which_key_map.t = {
+    \ 'name': '+terminal',
+    \ 'n': [':FloatermNew --width=1.0 --height=1.0 --autoclose=1', 'New Floating Terminal'],
+    \ }
+
 "{{{2 CoC Keybinding
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
