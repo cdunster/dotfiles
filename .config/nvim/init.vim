@@ -1,4 +1,5 @@
 "{{{ Plugins
+
 call plug#begin(stdpath('data') . '/plugged')
 
 "Floating terminal in vim.
@@ -11,6 +12,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
+
 "}}}
 "{{{ Keybinding
 
@@ -198,7 +200,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "}}}
 
 "}}}
-"{{{ Neovim settings.
+"{{{ Neovim settings. These are at the end to make sure they are set.
+
 set ignorecase	        	"Enable case insensitive matching.
 set tabstop=4	        	"Size of a tab.
 set softtabstop=4	        "See multiple spaces as a tab.
