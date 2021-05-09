@@ -67,7 +67,7 @@ let g:which_key_map.d = {
 "Floaterm commands.
 let g:which_key_map.t = {
     \ 'name': '+terminal',
-    \ 'n': [':FloatermNew', 'new-floaterm'],
+    \ 'n': [':FloatermNew! cd %:p:h && clear', 'new-floaterm'],
     \ }
 
 "{{{2 CoC Keybinding
