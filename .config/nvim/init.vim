@@ -49,12 +49,10 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 "{{{ Keybindings
 
 "Write the current file.
-nnoremap <silent> <leader>w :w<CR>
-let g:which_key_map.w = 'Write current file'
+let g:which_key_map.w = [':w', 'write-file']
 
 "Quit the current window. Closes neovim if all windows are closed.
-nnoremap <silent> <leader>q :q<CR>
-let g:which_key_map.q = 'Quit current window'
+let g:which_key_map.q = [':q', 'quit-window']
 
 "Toggle the current fold with TAB.
 nnoremap <TAB> za
@@ -69,7 +67,7 @@ let g:which_key_map.d = {
 "Floaterm commands.
 let g:which_key_map.t = {
     \ 'name': '+terminal',
-    \ 'n': [':FloatermNew', 'New Floating Terminal'],
+    \ 'n': [':FloatermNew', 'new-floaterm'],
     \ }
 
 "{{{2 CoC Keybinding
