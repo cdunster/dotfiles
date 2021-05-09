@@ -1,29 +1,21 @@
-"{{{ Plugins
-
+"------ Plugins ------
 call plug#begin(stdpath('data') . '/plugged')
-
 "Floating terminal in vim.
 Plug 'voldikss/vim-floaterm'
-
 "Code completion.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 "Colour scheme
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
-
 "Which Key.
 Plug 'liuchengxu/vim-which-key'
-
 call plug#end()
 
-"}}}
-"{{{ Floaterm Settings
+"------ Floaterm Settings ------
 let g:floaterm_width = 1.0
 let g:floaterm_height = 1.0
 let g:floaterm_autoclose = 1
-"}}}
-"{{{ Which Key Settings
 
+"------ Which Key Settings ------
 "Set SPC to the leader key for custom commands.
 let g:mapleader=' '
 
@@ -45,9 +37,7 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
-"}}}
-"{{{ Keybindings
-
+"------ Keybindings ------
 "Write the current file.
 let g:which_key_map.w = [':w', 'write-file']
 
@@ -73,7 +63,7 @@ let g:which_key_map.t = {
     \ 'n': [':FloatermNew! cd %:p:h && clear', 'new-floaterm'],
     \ }
 
-"{{{2 CoC Keybinding
+"------ CoC Keybinding ------
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
@@ -239,11 +229,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-"}}}
 
-"}}}
-"{{{ Neovim settings. These are at the end to make sure they are set.
-
+"------ Neovim settings. These are at the end to make sure they are set ------
 set ignorecase	        	"Enable case insensitive matching.
 set tabstop=4	        	"Size of a tab.
 set softtabstop=4	        "See multiple spaces as a tab.
@@ -263,4 +250,3 @@ set cursorline
 " let g:airline_theme='onehalfdark'
 " let g:lightline = { 'colorscheme': 'onehalfdark' }
 
-"}}}
