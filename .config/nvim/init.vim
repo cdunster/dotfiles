@@ -64,6 +64,9 @@ let g:which_key_map.d = {
     \ 'v': [':e ~/.config/nvim/init.vim', 'init.vim'],
     \ }
 
+"Git commands and open lazygit.
+let g:which_key_map.g = [':FloatermNew lazygit -w %:p:h', 'lazygit']
+
 "Floaterm commands.
 let g:which_key_map.t = {
     \ 'name': '+terminal',
