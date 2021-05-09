@@ -239,7 +239,7 @@ set shiftwidth=4            "Autoindented width.
 set number relativenumber   "Enable line numbers.
 set wildmode=longest,list   "Enable bash-like tab completions.
 set foldmethod=marker       "Define folds with three braces in a comment.
-set termguicolors
+set termguicolors           "Enable full GUI colours in the terminal.
 
 "Colour scheme.
 colorscheme onehalfdark
