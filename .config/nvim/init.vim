@@ -241,6 +241,7 @@ set wildmode=longest,list   "Enable bash-like tab completions.
 set foldmethod=marker       "Define folds with three braces in a comment.
 set termguicolors           "Enable full GUI colours in the terminal.
 set mouse=a                 "Enable the mouse for all modes.
+set clipboard+=unnamedplus  "Use the system clipboard.
 
 "Toggle the line number mode in different situations.
 :augroup numbertoggle
