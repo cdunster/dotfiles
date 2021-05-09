@@ -17,7 +17,7 @@ Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 "}}}
-"{{{ Keybinding
+"{{{ Which Key Settings.
 
 "Set SPC to the leader key for custom commands.
 let g:mapleader=' '
@@ -39,6 +39,9 @@ highlight default link WhichKeyDesc      Function
 autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+"}}}
+"{{{ Keybindings
 
 "Write the current file.
 nnoremap <silent> <leader>w :w<CR>
