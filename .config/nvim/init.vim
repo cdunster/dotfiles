@@ -17,7 +17,12 @@ Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 "}}}
-"{{{ Which Key Settings.
+"{{{ Floaterm Settings
+let g:floaterm_width = 1.0
+let g:floaterm_height = 1.0
+let g:floaterm_autoclose = 1
+"}}}
+"{{{ Which Key Settings
 
 "Set SPC to the leader key for custom commands.
 let g:mapleader=' '
@@ -54,9 +59,10 @@ let g:which_key_map.q = 'Quit current window'
 "Toggle the current fold with TAB.
 nnoremap <TAB> za
 
+"Floaterm commands.
 let g:which_key_map.t = {
     \ 'name': '+terminal',
-    \ 'n': [':FloatermNew --width=1.0 --height=1.0 --autoclose=1', 'New Floating Terminal'],
+    \ 'n': [':FloatermNew', 'New Floating Terminal'],
     \ }
 
 "{{{2 CoC Keybinding
