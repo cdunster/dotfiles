@@ -242,6 +242,13 @@ set foldmethod=marker       "Define folds with three braces in a comment.
 set termguicolors           "Enable full GUI colours in the terminal.
 set mouse=a                 "Enable the mouse for all modes.
 
+"Toggle the line number mode in different situations.
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
 "Colour scheme.
 colorscheme onehalfdark
 syntax on
