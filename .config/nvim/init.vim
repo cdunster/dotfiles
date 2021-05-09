@@ -59,6 +59,13 @@ let g:which_key_map.q = 'Quit current window'
 "Toggle the current fold with TAB.
 nnoremap <TAB> za
 
+"Edit and commit dotfiles.
+let g:which_key_map.d = {
+    \ 'name': '+dotfiles',
+    \ 'g': [':FloatermNew lazygit -w ~ -g ~/.cfg', 'lazygit-dotfiles'],
+    \ 'v': [':e ~/.config/nvim/init.vim', 'init.vim'],
+    \ }
+
 "Floaterm commands.
 let g:which_key_map.t = {
     \ 'name': '+terminal',
