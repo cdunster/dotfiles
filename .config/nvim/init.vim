@@ -13,6 +13,17 @@ Plug 'mhinz/vim-startify'
 call plug#end()
 
 "------ Startify Settings ------
+"Automatically update sessions before quiting or loading a new session.
+let g:startify_session_persistence = 1
+"When opening a file or bookmark, change to the root directory.
+let g:startify_change_to_vcs_root = 1
+"Set header to unicode instead of ASCII.
+let g:startify_fortune_use_unicode = 1
+"Do not show empty buffer or quit prompts.
+let g:startify_enable_special = 0
+"Sort sessions by modification time rather than alphabetically.
+let g:startify_session_sort = 1
+
 let g:startify_custom_header = startify#center([
     \ ' __  __          ___    ___                 __      __                 ___       __  ____     ',
     \ '/\ \/\ \        /\_ \  /\_ \               /\ \  __/\ \               /\_ \     /\ \ \/\ \    ',
