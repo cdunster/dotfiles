@@ -13,7 +13,7 @@ Plug 'mhinz/vim-startify'
 call plug#end()
 
 "------ Startify Settings ------
-let g:startify_custom_header = [
+let g:startify_custom_header = startify#center([
     \ ' __  __          ___    ___                 __      __                 ___       __  ____     ',
     \ '/\ \/\ \        /\_ \  /\_ \               /\ \  __/\ \               /\_ \     /\ \ \/\ \    ',
     \ '\ \ \_\ \     __\//\ \ \//\ \     ___      \ \ \/\ \ \ \    ___   _ __\//\ \    \_\ \ \ \ \   ',
@@ -22,7 +22,7 @@ let g:startify_custom_header = [
     \ '   \ \_\ \_\ \____\/\____\/\____\ \____/\ \   \ `\___x___/\ \____/\ \_\  /\____\ \___,_\ \/\_\',
     \ '    \/_/\/_/\/____/\/____/\/____/\/___/\ \/    \/___//__/  \/___/  \/_/  \/____/\/__,_ /\ \/_/',
     \ '                                        \/                                                    ',
-    \ ]
+    \ ])
 
 let g:startify_lists = [
     \ { 'type': 'sessions',  'header': ['   Sessions']       },
