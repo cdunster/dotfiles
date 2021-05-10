@@ -53,6 +53,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"Find file in current dir with space space.
+let g:which_key_map[' '] = [':FZF', 'find-files-current-dir']
+
 "File commands.
 let g:which_key_map.f = {
     \ 'name': '+files',
