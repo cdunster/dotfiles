@@ -53,6 +53,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"File commands.
+let g:which_key_map.f = {
+    \ 'name': '+files',
+    \ 'f': [':FZF', 'fuzzy-find-file'],
+    \ }
+
 "Edit and commit dotfiles.
 let g:which_key_map.d = {
     \ 'name': '+dotfiles',
@@ -157,8 +163,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
