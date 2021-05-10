@@ -8,7 +8,29 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Which Key.
 Plug 'liuchengxu/vim-which-key'
+"Start Screen.
+Plug 'mhinz/vim-startify'
 call plug#end()
+
+"------ Startify Settings ------
+let g:startify_custom_header = [
+    \ ' __  __          ___    ___                 __      __                 ___       __  ____     ',
+    \ '/\ \/\ \        /\_ \  /\_ \               /\ \  __/\ \               /\_ \     /\ \ \/\ \    ',
+    \ '\ \ \_\ \     __\//\ \ \//\ \     ___      \ \ \/\ \ \ \    ___   _ __\//\ \    \_\ \ \ \ \   ',
+    \ ' \ \  _  \  / __`\\ \ \  \ \ \   / __`\     \ \ \ \ \ \ \  / __`\/\` __\\ \ \   / _` \ \ \ \  ',
+    \ '  \ \ \ \ \/\  __/ \_\ \_ \_\ \_/\ \L\ \__   \ \ \_/ \_\ \/\ \L\ \ \ \/  \_\ \_/\ \L\ \ \ \_\ ',
+    \ '   \ \_\ \_\ \____\/\____\/\____\ \____/\ \   \ `\___x___/\ \____/\ \_\  /\____\ \___,_\ \/\_\',
+    \ '    \/_/\/_/\/____/\/____/\/____/\/___/\ \/    \/___//__/  \/___/  \/_/  \/____/\/__,_ /\ \/_/',
+    \ '                                        \/                                                    ',
+    \ ]
+
+let g:startify_lists = [
+    \ { 'type': 'sessions',  'header': ['   Sessions']       },
+    \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+    \ { 'type': 'files',     'header': ['   Recent Files']            },
+    \ { 'type': 'dir',       'header': ['   Files in '. getcwd()] },
+    \ { 'type': 'commands',  'header': ['   Commands']       },
+    \ ]
 
 "------ Floaterm Settings ------
 let g:floaterm_width = 1.0
