@@ -47,6 +47,12 @@ let g:which_key_map.q = [':q', 'quit-window']
 "Toggle the current fold with TAB.
 nnoremap <TAB> za
 
+"Window navigation with Ctrl and navigation keys.
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 "Edit and commit dotfiles.
 let g:which_key_map.d = {
     \ 'name': '+dotfiles',
