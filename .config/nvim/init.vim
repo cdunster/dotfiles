@@ -247,6 +247,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "------ Neovim settings. These are at the end to make sure they are set ------
 set ignorecase	        	"Enable case insensitive matching.
+set smartcase               "Emable smartcase matching (match case insensitively unless uppercase used).
 set tabstop=4	        	"Size of a tab.
 set softtabstop=4	        "See multiple spaces as a tab.
 set expandtab	        	"Converts tabs to spaces.
