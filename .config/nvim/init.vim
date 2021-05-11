@@ -91,6 +91,9 @@ nnoremap <C-l> <C-w>l
 "Find file in current dir with space space.
 let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
 
+"Fuzzy search with ripgrep.
+let g:which_key_map['/'] = [':Rg', 'fuzzy-search']
+
 "File commands.
 let g:which_key_map.f = {
     \ 'name': '+files',
