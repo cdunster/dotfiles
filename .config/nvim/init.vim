@@ -81,9 +81,6 @@ let g:which_key_map.w = [':w', 'write-file']
 "Quit the current window. Closes neovim if all windows are closed.
 let g:which_key_map.q = [':q', 'quit-window']
 
-"Toggle the current fold with TAB.
-nnoremap <TAB> za
-
 "Window navigation with Ctrl and navigation keys.
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
