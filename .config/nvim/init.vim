@@ -103,12 +103,12 @@ let g:which_key_map.d = {
     \ }
 
 "Git commands and open lazygit.
-let g:which_key_map.g = [':FloatermNew lazygit -w %:p:h', 'lazygit']
+let g:which_key_map.g = [':FloatermNew lazygit', 'lazygit']
 
 "Floaterm commands.
 let g:which_key_map.t = {
     \ 'name': '+terminal',
-    \ 'n': [':FloatermNew! cd %:p:h && clear', 'new-floaterm'],
+    \ 'n': [':FloatermNew', 'new-floaterm'],
     \ }
 
 "------ CoC Keybinding ------
