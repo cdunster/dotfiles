@@ -104,6 +104,13 @@ let g:which_key_map['f'] = {
     \ '?': [':Lines', 'fuzzy-search-in-open-buffers'],
     \ }
 
+"Buffer commands.
+let g:which_key_map['b'] = {
+    \ 'name': '+buffer',
+    \ 'k': [':bd', 'kill-current-buffer'],
+    \ 'K': [':bd!', 'kill-current-buffer-no-save'],
+    \ }
+
 "Edit and commit dotfiles.
 let g:which_key_map['d'] = {
     \ 'name': '+dotfiles',
