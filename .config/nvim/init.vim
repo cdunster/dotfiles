@@ -97,23 +97,23 @@ let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
 let g:which_key_map['/'] = [':Rg', 'fuzzy-search']
 
 "File commands.
-let g:which_key_map.f = {
+let g:which_key_map['f'] = {
     \ 'name': '+files',
     \ 'f': [':Files ~', 'fuzzy-find-file'],
     \ }
 
 "Edit and commit dotfiles.
-let g:which_key_map.d = {
+let g:which_key_map['d'] = {
     \ 'name': '+dotfiles',
     \ 'g': [':FloatermNew lazygit -w ~ -g ~/.cfg', 'lazygit-dotfiles'],
     \ 'v': [':e ~/.config/nvim/init.vim', 'init.vim'],
     \ }
 
 "Git commands and open lazygit.
-let g:which_key_map.g = [':LazyGit', 'lazygit']
+let g:which_key_map['g'] = [':LazyGit', 'lazygit']
 
 "Floaterm commands.
-let g:which_key_map.t = {
+let g:which_key_map['t'] = {
     \ 'name': '+terminal',
     \ 'n': [':FloatermNew', 'new-floaterm'],
     \ }
