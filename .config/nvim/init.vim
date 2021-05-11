@@ -92,7 +92,7 @@ let g:which_key_map[' '] = [':FZF', 'find-files-current-dir']
 "File commands.
 let g:which_key_map.f = {
     \ 'name': '+files',
-    \ 'f': [':FZF', 'fuzzy-find-file'],
+    \ 'f': [':FZF ~', 'fuzzy-find-file'],
     \ }
 
 "Edit and commit dotfiles.
