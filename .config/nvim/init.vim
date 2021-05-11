@@ -117,7 +117,8 @@ let g:which_key_map['g'] = [':LazyGit', 'lazygit']
 "Floaterm commands.
 let g:which_key_map['t'] = {
     \ 'name': '+terminal',
-    \ 'n': [':FloatermNew', 'new-floaterm'],
+    \ 'n': [':FloatermNew', 'new-terminal-floating'],
+    \ 'b': [':FloatermNew --wintype=split --height=0.2', 'new-terminal-bottom'],
     \ }
 
 "------ CoC Keybinding ------
