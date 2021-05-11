@@ -48,8 +48,8 @@ let g:startify_lists = [
     \ ]
 
 "------ Floaterm Settings ------
-let g:floaterm_width = 1.0
-let g:floaterm_height = 1.0
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
 let g:floaterm_autoclose = 1
 
 "------ Which Key Settings ------
@@ -121,7 +121,8 @@ let g:which_key_map['g'] = [':LazyGit', 'lazygit']
 "Floaterm commands.
 let g:which_key_map['t'] = {
     \ 'name': '+terminal',
-    \ 'n': [':FloatermNew', 'new-terminal-floating'],
+    \ 'n': [':terminal', 'new-terminal'],
+    \ 'f': [':FloatermNew', 'new-terminal-floating'],
     \ 'b': [':FloatermNew --wintype=split --height=0.2', 'new-terminal-bottom'],
     \ }
 
