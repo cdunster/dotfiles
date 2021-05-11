@@ -12,6 +12,8 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 "FZF fuzzy file searcher.
 Plug 'junegunn/fzf.vim'
+"Open LazyGit in a floating window.
+Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 call plug#end()
 
 "------ Startify Settings ------
@@ -108,7 +110,7 @@ let g:which_key_map.d = {
     \ }
 
 "Git commands and open lazygit.
-let g:which_key_map.g = [':FloatermNew lazygit', 'lazygit']
+let g:which_key_map.g = [':LazyGit', 'lazygit']
 
 "Floaterm commands.
 let g:which_key_map.t = {
