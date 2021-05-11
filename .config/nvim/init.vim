@@ -10,6 +10,8 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'liuchengxu/vim-which-key'
 "Start Screen.
 Plug 'mhinz/vim-startify'
+"FZF fuzzy file searcher.
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 "------ Startify Settings ------
@@ -87,12 +89,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "Find file in current dir with space space.
-let g:which_key_map[' '] = [':FZF', 'find-files-current-dir']
+let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
 
 "File commands.
 let g:which_key_map.f = {
     \ 'name': '+files',
-    \ 'f': [':FZF ~', 'fuzzy-find-file'],
+    \ 'f': [':Files ~', 'fuzzy-find-file'],
     \ }
 
 "Edit and commit dotfiles.
