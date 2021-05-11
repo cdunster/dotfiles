@@ -100,6 +100,8 @@ let g:which_key_map['/'] = [':Rg', 'fuzzy-search']
 let g:which_key_map['f'] = {
     \ 'name': '+files',
     \ 'f': [':Files ~', 'fuzzy-find-file'],
+    \ '/': [':BLines', 'fuzzy-search-in-file'],
+    \ '?': [':Lines', 'fuzzy-search-in-open-buffers'],
     \ }
 
 "Edit and commit dotfiles.
