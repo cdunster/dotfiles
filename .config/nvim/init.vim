@@ -94,6 +94,9 @@ nnoremap <silent> <C-S-TAB> :bp<CR>
 "Open Startify in a new tab.
 nnoremap <silent> <C-n> :tabnew<CR>:Startify<CR>
 
+"Clear search highlight with Ctrl-/.
+nnoremap <silent> <C-/> :noh<CR>
+
 "Write the current file.
 let g:which_key_map['w'] = [':w', 'write-file']
 
