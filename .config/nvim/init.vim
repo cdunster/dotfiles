@@ -323,3 +323,5 @@ set cursorline
 " let g:airline_theme='onehalfdark'
 " let g:lightline = { 'colorscheme': 'onehalfdark' }
 
+"------ Environment Variables ------
+let $FZF_DEFAULT_COMMAND = 'fd --hidden --exclude .git --no-ignore'
