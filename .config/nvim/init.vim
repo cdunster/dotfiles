@@ -87,6 +87,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"Buffer navigation with Ctrl and Tab.
+nnoremap <silent> <C-TAB> :bn<CR>
+nnoremap <silent> <C-S-TAB> :bp<CR>
+
 "Find file in current dir with space space.
 let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
 
