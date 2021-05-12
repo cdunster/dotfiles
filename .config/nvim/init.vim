@@ -75,12 +75,6 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 "------ Keybindings ------
-"Write the current file.
-let g:which_key_map.w = [':w', 'write-file']
-
-"Quit the current window. Closes neovim if all windows are closed.
-let g:which_key_map.q = [':q', 'quit-window']
-
 "Window navigation with Ctrl and navigation keys.
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -99,6 +93,12 @@ nnoremap <silent> <C-S-TAB> :bp<CR>
 
 "Open Startify in a new tab.
 nnoremap <silent> <C-n> :tabnew<CR>:Startify<CR>
+
+"Write the current file.
+let g:which_key_map.w = [':w', 'write-file']
+
+"Quit the current window. Closes neovim if all windows are closed.
+let g:which_key_map.q = [':q', 'quit-window']
 
 "Find file in current dir with space space.
 let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
