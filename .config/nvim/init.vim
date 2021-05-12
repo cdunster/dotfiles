@@ -93,6 +93,9 @@ let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
 "Fuzzy search with ripgrep.
 let g:which_key_map['/'] = [':Rg', 'fuzzy-search']
 
+"Fuzzy search open buffers.
+let g:which_key_map[','] = [':Buffers', 'open-buffers']
+
 "File commands.
 let g:which_key_map['f'] = {
     \ 'name': '+files',
