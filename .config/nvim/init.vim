@@ -87,6 +87,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"Move current Window with Alt and navigation keys.
+nnoremap <M-h> <C-w><S-h>
+nnoremap <M-j> <C-w><S-j>
+nnoremap <M-k> <C-w><S-k>
+nnoremap <M-l> <C-w><S-l>
+
 "Buffer navigation with Ctrl and Tab.
 nnoremap <silent> <C-TAB> :bn<CR>
 nnoremap <silent> <C-S-TAB> :bp<CR>
