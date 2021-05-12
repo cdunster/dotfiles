@@ -95,10 +95,10 @@ nnoremap <silent> <C-S-TAB> :bp<CR>
 nnoremap <silent> <C-n> :tabnew<CR>:Startify<CR>
 
 "Write the current file.
-let g:which_key_map.w = [':w', 'write-file']
+let g:which_key_map['w'] = [':w', 'write-file']
 
 "Quit the current window. Closes neovim if all windows are closed.
-let g:which_key_map.q = [':q', 'quit-window']
+let g:which_key_map['q'] = [':q', 'quit-window']
 
 "Find file in current dir with space space.
 let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
