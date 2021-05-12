@@ -96,6 +96,9 @@ let g:which_key_map['/'] = [':Rg', 'fuzzy-search']
 "Fuzzy search open buffers.
 let g:which_key_map[','] = [':Buffers', 'open-buffers']
 
+"Go to the homescreen, closing the current session.
+let g:which_key_map['h'] = [':SClose', 'close-session-go-home']
+
 "File commands.
 let g:which_key_map['f'] = {
     \ 'name': '+files',
