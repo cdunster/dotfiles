@@ -337,6 +337,7 @@ set clipboard+=unnamedplus  "Use the system clipboard.
 set scrolloff=4             "Context lines around cursor when scrolling.
 set spell spelllang=en_gb   "Enable spell checking.
 set statusline=[%n]\ %<%f%m "Set simple statusline.
+set list lcs+=space:·       "Show whitespace characters.
 
 "Toggle the line number mode in different situations.
 :augroup numbertoggle
