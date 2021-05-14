@@ -334,6 +334,7 @@ set foldmethod=marker       "Define folds with three braces in a comment.
 set termguicolors           "Enable full GUI colours in the terminal.
 set mouse=a                 "Enable the mouse for all modes.
 set clipboard+=unnamedplus  "Use the system clipboard.
+set scrolloff=4             "Context lines around cursor when scrolling.
 
 "Toggle the line number mode in different situations.
 :augroup numbertoggle
