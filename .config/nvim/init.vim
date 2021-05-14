@@ -128,6 +128,8 @@ let g:which_key_map['b'] = {
     \ 'name': '+buffer',
     \ 'k': [':bd', 'kill-current-buffer'],
     \ 'K': [':bd!', 'kill-current-buffer-no-save'],
+    \ 'o': [':on', 'kill-other-buffers'],
+    \ 'O': [':on!', 'kill-other-buffers-no-save'],
     \ }
 
 "Edit and commit dotfiles.
