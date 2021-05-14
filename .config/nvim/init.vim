@@ -322,11 +322,11 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "------ Neovim settings. These are at the end to make sure they are set ------
-set ignorecase	        	"Enable case insensitive matching.
+set ignorecase              "Enable case insensitive matching.
 set smartcase               "Emable smartcase matching (match case insensitively unless uppercase used).
-set tabstop=4	        	"Size of a tab.
-set softtabstop=4	        "See multiple spaces as a tab.
-set expandtab	        	"Converts tabs to spaces.
+set tabstop=4               "Size of a tab.
+set softtabstop=4           "See multiple spaces as a tab.
+set expandtab               "Converts tabs to spaces.
 set shiftwidth=4            "Autoindented width.
 set number relativenumber   "Enable line numbers.
 set wildmode=longest,list   "Enable bash-like tab completions.
