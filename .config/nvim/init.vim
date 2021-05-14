@@ -4,6 +4,8 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'voldikss/vim-floaterm'
 "Code completion.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Better syntax highlighting for C/C++. Requires CoC.
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 "Colour scheme
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Which Key.
