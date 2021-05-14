@@ -336,6 +336,7 @@ set mouse=a                 "Enable the mouse for all modes.
 set clipboard+=unnamedplus  "Use the system clipboard.
 set scrolloff=4             "Context lines around cursor when scrolling.
 set spell spelllang=en_gb   "Enable spell checking.
+set statusline=[%n]\ %<%f%m "Set simple statusline.
 
 "Toggle the line number mode in different situations.
 :augroup numbertoggle
