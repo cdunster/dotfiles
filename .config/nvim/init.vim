@@ -14,6 +14,8 @@ Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf.vim'
 "Open LazyGit in a floating window.
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+"Git commands.
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "------ Startify Settings ------
