@@ -109,9 +109,6 @@ nnoremap <silent> gy <Plug>(coc-type-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
 nnoremap <silent> gr <Plug>(coc-references)
 
-"Write the current file.
-let g:which_key_map['w'] = [':w', 'write-file']
-
 "Quit the current window. Closes neovim if all windows are closed.
 let g:which_key_map['q'] = [':q', 'quit-window']
 
@@ -131,6 +128,7 @@ let g:which_key_map['h'] = [':SClose', 'close-session-go-home']
 let g:which_key_map['f'] = {
     \ 'name': '+files',
     \ 'f': [':Files ~', 'fuzzy-find-file'],
+    \ 's': [':w', 'save-file'],
     \ '/': [':BLines', 'fuzzy-search-in-file'],
     \ '?': [':Lines', 'fuzzy-search-in-open-buffers'],
     \ }
