@@ -273,3 +273,4 @@ set cursorline
 
 "------ Environment Variables ------
 let $FZF_DEFAULT_COMMAND = 'fd --hidden --exclude .git --no-ignore'
+let $TERM = 'alacritty'
