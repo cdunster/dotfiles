@@ -27,7 +27,7 @@ let g:startify_session_persistence = 1
 let g:startify_change_to_vcs_root = 1
 "Set header to unicode instead of ASCII.
 let g:startify_fortune_use_unicode = 1
-"Do not show empty buffer or quit prompts.
+"Do not show empty buffer or quit links on the welcome page.
 let g:startify_enable_special = 0
 "Sort sessions by modification time rather than alphabetically.
 let g:startify_session_sort = 1
