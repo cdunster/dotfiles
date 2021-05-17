@@ -152,37 +152,7 @@ let g:which_key_map['t'] = {
     \ 'b': [':FloatermNew --wintype=split --height=0.2', 'new-terminal-bottom'],
     \ }
 
-"------ CoC Keybinding ------
-" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
-" unicode characters in the file autoload/float.vim
-set encoding=utf-8
-
-" TextEdit might fail if hidden is not set.
-set hidden
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("nvim-0.5.0") || has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
-
+"------ CoC Keybindings ------
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -336,6 +306,15 @@ set scrolloff=4             "Context lines around cursor when scrolling.
 set spell spelllang=en_gb   "Enable spell checking.
 set statusline=[%n]\ %<%f%m "Set simple statusline.
 set list lcs+=space:·       "Show whitespace characters.
+set hidden                  "Keep buffers open in the background.
+set signcolumn=yes          "Always show the signcolumn.
+
+"Needed by CoC plugin.
+set nobackup                "Disable creating file backups.
+set nowritebackup           "Disable creating backups of files before writing.
+set updatetime=300          "Better user experience.
+set shortmess+=c            "Disable hit-enter prompts and other messages for ins-completion-menu.
+set cmdheight=2             "Increase height of the command line.
 
 "Toggle the line number mode in different situations.
 :augroup numbertoggle
