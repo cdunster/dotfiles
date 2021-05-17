@@ -237,6 +237,7 @@ set number relativenumber   "Enable line numbers.
 set wildmode=longest,list   "Enable bash-like tab completions.
 set foldmethod=marker       "Define folds with three braces in a comment.
 set termguicolors           "Enable full GUI colours in the terminal.
+set guifont=FiraCode\ Nerd\ Font\ Retina
 set mouse=a                 "Enable the mouse for all modes.
 set clipboard+=unnamedplus  "Use the system clipboard.
 set scrolloff=4             "Context lines around cursor when scrolling.
