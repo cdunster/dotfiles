@@ -128,7 +128,8 @@ let g:which_key_map['h'] = [':SClose', 'close-session-go-home']
 let g:which_key_map['f'] = {
     \ 'name': '+files',
     \ 'f': [':Files ~', 'fuzzy-find-file'],
-    \ 's': [':w', 'save-file'],
+    \ 's': [':w', 'save-current-buffer'],
+    \ 'S': [':wa', 'save-all-buffers'],
     \ '/': [':BLines', 'fuzzy-search-in-file'],
     \ '?': [':Lines', 'fuzzy-search-in-open-buffers'],
     \ }
