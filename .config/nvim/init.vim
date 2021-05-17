@@ -133,13 +133,18 @@ let g:which_key_map['f'] = {
     \ '?': [':Lines', 'fuzzy-search-in-open-buffers'],
     \ }
 
+"Window commands.
+let g:which_key_map['w'] = {
+    \ 'name': '+window',
+    \ 'o': [':on', 'kill-other-windows'],
+    \ 'O': [':on!', 'kill-other-windows-no-save'],
+    \ }
+
 "Buffer commands.
 let g:which_key_map['b'] = {
     \ 'name': '+buffer',
     \ 'k': [':bd', 'kill-current-buffer'],
     \ 'K': [':bd!', 'kill-current-buffer-no-save'],
-    \ 'o': [':on', 'kill-other-buffers'],
-    \ 'O': [':on!', 'kill-other-buffers-no-save'],
     \ }
 
 "Edit and commit dotfiles.
