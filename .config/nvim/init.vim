@@ -96,9 +96,6 @@ nnoremap <silent> <C-S-TAB> :bp<CR>
 "Open Startify in a new tab.
 nnoremap <silent> <C-n> :tabnew<CR>:Startify<CR>
 
-"Clear search highlight with Ctrl-/.
-nnoremap <silent> <C-/> :noh<CR>
-
 "Navigate errors.
 nnoremap <silent> [e <Plug>(coc-diagnostic-prev)
 nnoremap <silent> ]e <Plug>(coc-diagnostic-next)
@@ -245,6 +242,7 @@ set spell spelllang=en_gb   "Enable spell checking.
 set list lcs+=space:·       "Show whitespace characters.
 set hidden                  "Keep buffers open in the background.
 set signcolumn=yes          "Always show the signcolumn.
+set nohlsearch              "Disable highlighting the search results.
 
 "Needed by CoC plugin.
 set nobackup                "Disable creating file backups.
