@@ -265,6 +265,7 @@ set statusline=[%n]\ %<%f%m\ %{coc#status()}%{get(b:,'coc_current_function','')}
 
 "Colour scheme.
 colorscheme onehalfdark
+highlight NormalFloat guifg=s:fg
 syntax on
 set t_Co=256
 set cursorline
