@@ -1,2 +1,5 @@
+# An ignore file for the fd tool in .gitignore format.
+# Use the `!` pre-fix to include the file/dir instead of ignore.
+
 !.config/
 !.xmonad/
