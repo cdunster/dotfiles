@@ -18,6 +18,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 "Git commands.
 Plug 'tpope/vim-fugitive'
+"Better Rust support. Uses Syntastic for highlighting.
+Plug 'rust-lang/rust.vim'
+"Advanced syntax highlighting.
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 "------ Startify Settings ------
