@@ -1,6 +1,6 @@
 "------ Plugins ------
 call plug#begin(stdpath('data') . '/plugged')
-"Floating terminal in vim.
+"Floating terminal in Vim.
 Plug 'voldikss/vim-floaterm'
 "Code completion.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -21,11 +21,11 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "------ Startify Settings ------
-"Automatically update sessions before quiting or loading a new session.
+"Automatically update sessions before quitting or loading a new session.
 let g:startify_session_persistence = 1
 "When opening a file or bookmark, change to the root directory.
 let g:startify_change_to_vcs_root = 1
-"Set header to unicode instead of ASCII.
+"Set header to Unicode instead of ASCII.
 let g:startify_fortune_use_unicode = 1
 "Do not show empty buffer or quit links on the welcome page.
 let g:startify_enable_special = 0
@@ -55,10 +55,10 @@ let g:floaterm_height = 0.9
 let g:floaterm_autoclose = 1
 
 "------ Which Key Settings ------
-"Set SPC to the leader key for custom commands.
+"Set the space bar to the leader key for custom commands.
 let g:mapleader=' '
 
-"Setup Which Key.
+"Set up Which Key.
 call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
@@ -106,10 +106,10 @@ nnoremap <silent> gy <Plug>(coc-type-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
 nnoremap <silent> gr <Plug>(coc-references)
 
-"Quit the current window. Closes neovim if all windows are closed.
+"Quit the current window. Closes Neovim if all windows are closed.
 let g:which_key_map['q'] = [':q', 'quit-window']
 
-"Find file in current dir with space space.
+"Find file in current directory with space space.
 let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
 
 "Fuzzy search with ripgrep.
@@ -152,7 +152,7 @@ let g:which_key_map['d'] = {
     \ 'v': [':e ~/.config/nvim/init.vim', 'init.vim'],
     \ }
 
-"Git commands and open lazygit.
+"Git commands and open LazyGit.
 let g:which_key_map['g'] = [':LazyGit', 'lazygit']
 
 "Floaterm commands.
@@ -174,9 +174,9 @@ let g:which_key_map['c'] = {
     \ }
 
 "------ CoC Code Completion and Documentation ------
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
+"Use tab for trigger completion with characters ahead and navigate.
+"NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+"other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -188,14 +188,14 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <C-SPACE> to trigger completion.
+"Use <C-SPACE> to trigger completion.
 inoremap <silent><expr> <C-SPACE> coc#refresh()
 
-" Make <CR> auto-select the first completion item and notify coc.nvim to format on enter.
+"Make the enter key auto-select the first completion item and notify coc.nvim to format on enter.
 inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-" Use K to show documentation in preview window.
+"Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
@@ -209,11 +209,11 @@ function! s:show_documentation()
 endfunction
 
 "------ CoC Code Highlights and Selection ------
-" Highlight the symbol and its references when holding the cursor.
+"Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+"Map function and class text objects
+"NOTE: Requires 'textDocument.documentSymbol' support from the language server.
 xmap if <Plug>(coc-funcobj-i)
 omap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
@@ -225,11 +225,11 @@ omap ac <Plug>(coc-classobj-a)
 
 "------ Neovim settings. These are at the end to make sure they are set ------
 set ignorecase              "Enable case insensitive matching.
-set smartcase               "Emable smartcase matching (match case insensitively unless uppercase used).
+set smartcase               "Enable smart-case matching (match case insensitively unless upper-case used).
 set tabstop=4               "Size of a tab.
 set softtabstop=4           "See multiple spaces as a tab.
 set expandtab               "Converts tabs to spaces.
-set shiftwidth=4            "Autoindented width.
+set shiftwidth=4            "Auto-indented width.
 set number relativenumber   "Enable line numbers.
 set wildmode=longest,list   "Enable bash-like tab completions.
 set foldmethod=marker       "Define folds with three braces in a comment.
