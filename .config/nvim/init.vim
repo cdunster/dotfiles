@@ -97,14 +97,14 @@ nnoremap <silent> <C-S-TAB> :bp<CR>
 nnoremap <silent> <C-n> :tabnew<CR>:Startify<CR>
 
 "Navigate errors.
-nnoremap <silent> [e <Plug>(coc-diagnostic-prev)
-nnoremap <silent> ]e <Plug>(coc-diagnostic-next)
+nmap <silent> [e <Plug>(coc-diagnostic-prev)
+nmap <silent> ]e <Plug>(coc-diagnostic-next)
 
 "Code navigation.
-nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gy <Plug>(coc-type-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
-nnoremap <silent> gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 "Quit the current window. Closes Neovim if all windows are closed.
 let g:which_key_map['q'] = [':q', 'quit-window']
