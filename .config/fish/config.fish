@@ -1,4 +1,4 @@
-# Set the default terminal editor to be vim.
+# Set the default terminal editor to be Neovim.
 set -gx EDITOR nvim
 
 # Enable the starship cross-shell prompt.
