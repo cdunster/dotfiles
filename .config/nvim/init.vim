@@ -252,7 +252,12 @@ set shortmess+=c            "Disable hit-enter prompts and other messages for in
 set cmdheight=2             "Increase height of the command line.
 
 "Set the custom statusline.
-set statusline=[%n]\ %<%f%m\ %{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline=                                                             "Clear the statusline.
+set statusline+=[%n]                                                        "Add the buffer number to the statusline.
+set statusline+=\ %<%f%m                                                    "Add file name and modified/readonly flag to the statusline.
+set statusline+=\ %{coc#status()}%{get(b:,'coc_current_function','')}       "Add warning and error count from LSP.
+set statusline+=%=                                                          "Right-align the following.
+set statusline+=%{FugitiveHead()}                                           "Add the git branch name.
 
 "Toggle the line number mode in different situations.
 :augroup numbertoggle
