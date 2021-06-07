@@ -22,6 +22,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'rust-lang/rust.vim'
 "Advanced syntax highlighting.
 Plug 'vim-syntastic/syntastic'
+"Dart language support.
+Plug 'dart-lang/dart-vim-plugin'
+"Flutter support with commands.
+Plug 'thosakwe/vim-flutter'
 call plug#end()
 
 "------ Startify Settings ------
