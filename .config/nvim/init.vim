@@ -247,6 +247,7 @@ set list lcs+=space:·       "Show whitespace characters.
 set hidden                  "Keep buffers open in the background.
 set signcolumn=yes          "Always show the signcolumn.
 set nohlsearch              "Disable highlighting the search results.
+set nowrap                  "Don't wrap long lines onto multiple lines.
 
 "Needed by CoC plugin.
 set nobackup                "Disable creating file backups.
