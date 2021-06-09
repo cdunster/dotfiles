@@ -26,6 +26,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'dart-lang/dart-vim-plugin'
 "Flutter support with commands.
 Plug 'thosakwe/vim-flutter'
+"VimWiki for note-taking.
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "------ Startify Settings ------
@@ -61,6 +63,14 @@ let g:startify_lists = [
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.9
 let g:floaterm_autoclose = 1
+
+"------ VimWiki Settings ------
+let g:vimwiki_list = [{
+    \ 'path': '~/Dropbox/vimwiki',
+    \ 'syntax': 'markdown',
+    \ 'ext': '.md',
+    \ 'links_space_char': '_',
+    \ }]
 
 "------ Which Key Settings ------
 "Set the space bar to the leader key for custom commands.
@@ -137,13 +147,6 @@ let g:which_key_map['f'] = {
     \ 'S': [':wa', 'save-all-buffers'],
     \ '/': [':BLines', 'fuzzy-search-in-file'],
     \ '?': [':Lines', 'fuzzy-search-in-open-buffers'],
-    \ }
-
-"Window commands.
-let g:which_key_map['w'] = {
-    \ 'name': '+window',
-    \ 'o': [':on', 'kill-other-windows'],
-    \ 'O': [':on!', 'kill-other-windows-no-save'],
     \ }
 
 "Buffer commands.
