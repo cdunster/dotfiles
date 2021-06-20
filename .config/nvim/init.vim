@@ -28,6 +28,8 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 "VimWiki for note-taking.
 Plug 'vimwiki/vimwiki'
+"For debugging programmes in Neovim.
+Plug 'puremourning/vimspector'
 call plug#end()
 
 "------ Startify Settings ------
