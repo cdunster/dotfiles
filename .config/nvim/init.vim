@@ -30,6 +30,8 @@ Plug 'thosakwe/vim-flutter'
 Plug 'vimwiki/vimwiki'
 "For debugging programmes in Neovim.
 Plug 'puremourning/vimspector'
+"Comment-out lines.
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 "------ Startify Settings ------
