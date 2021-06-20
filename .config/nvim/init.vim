@@ -111,9 +111,6 @@ nnoremap <M-l> <C-w><S-l>
 nnoremap <silent> <C-TAB> :bn<CR>
 nnoremap <silent> <C-S-TAB> :bp<CR>
 
-"Open Startify in a new tab.
-nnoremap <silent> <C-n> :tabnew<CR>:Startify<CR>
-
 "Navigate errors.
 nmap <silent> [e <Plug>(coc-diagnostic-prev)
 nmap <silent> ]e <Plug>(coc-diagnostic-next)
