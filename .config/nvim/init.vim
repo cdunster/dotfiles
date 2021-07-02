@@ -15,7 +15,7 @@ Plug 'mhinz/vim-startify'
 "FZF fuzzy file searcher.
 Plug 'junegunn/fzf.vim'
 "Open LazyGit in a floating window.
-Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+Plug 'kdheepak/lazygit.nvim'
 "Git commands.
 Plug 'tpope/vim-fugitive'
 "Better Rust support. Uses Syntastic for highlighting.
