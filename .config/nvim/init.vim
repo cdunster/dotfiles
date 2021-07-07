@@ -13,6 +13,7 @@ Plug 'liuchengxu/vim-which-key'
 "Start Screen.
 Plug 'mhinz/vim-startify'
 "FZF fuzzy file searcher.
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 "Open LazyGit in a floating window.
 Plug 'kdheepak/lazygit.nvim'
