@@ -67,6 +67,9 @@ let g:floaterm_width = 0.9
 let g:floaterm_height = 0.9
 let g:floaterm_autoclose = 1
 
+"------ Vimspector Settings ------
+let g:vimspector_enable_mappings = 'HUMAN'
+
 "------ VimWiki Settings ------
 let g:vimwiki_list = [{
     \ 'path': '~/Dropbox/vimwiki',
