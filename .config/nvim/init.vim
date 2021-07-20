@@ -4,8 +4,6 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'voldikss/vim-floaterm'
 "Code completion.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Colour scheme
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Which Key.
 Plug 'liuchengxu/vim-which-key'
 "Start Screen.
@@ -31,6 +29,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'puremourning/vimspector'
 "Comment-out lines.
 Plug 'tpope/vim-commentary'
+"Gruvbox colour scheme.
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 "------ Startify Settings ------
@@ -279,14 +279,11 @@ set statusline+=%{FugitiveHead()}                                           "Add
 :augroup END
 
 "Colour scheme.
-colorscheme onehalfdark
-highlight NormalFloat guifg=s:fg
 syntax on
 set t_Co=256
 set cursorline
-"Enable one of the lines below when airline or lightline is added.
-" let g:airline_theme='onehalfdark'
-" let g:lightline = { 'colorscheme': 'onehalfdark' }
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 
 "------ Environment Variables ------
 let $FZF_DEFAULT_COMMAND = 'fd --hidden --exclude .git --no-ignore'
