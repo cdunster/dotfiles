@@ -1,37 +1,4 @@
-"------ Plugins ------
-call plug#begin(stdpath('data') . '/plugged')
-"Floating terminal in Vim.
-Plug 'voldikss/vim-floaterm'
-"Code completion.
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Which Key.
-Plug 'liuchengxu/vim-which-key'
-"Start Screen.
-Plug 'mhinz/vim-startify'
-"FZF fuzzy file searcher.
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-"Open LazyGit in a floating window.
-Plug 'kdheepak/lazygit.nvim'
-"Git commands.
-Plug 'tpope/vim-fugitive'
-"Better Rust support. Uses Syntastic for highlighting.
-Plug 'rust-lang/rust.vim'
-"Advanced syntax highlighting.
-Plug 'vim-syntastic/syntastic'
-"Dart language support.
-Plug 'dart-lang/dart-vim-plugin'
-"Flutter support with commands.
-Plug 'thosakwe/vim-flutter'
-"VimWiki for note-taking.
-Plug 'vimwiki/vimwiki'
-"For debugging programmes in Neovim.
-Plug 'puremourning/vimspector'
-"Comment-out lines.
-Plug 'tpope/vim-commentary'
-"Gruvbox colour scheme.
-Plug 'morhetz/gruvbox'
-call plug#end()
+lua require('plugins')
 
 "------ Startify Settings ------
 "Automatically update sessions before quitting or loading a new session.
