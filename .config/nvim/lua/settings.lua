@@ -37,6 +37,6 @@ vim.env.TERM = 'alacritty'
 ------ Colour scheme ------
 vim.cmd('syntax on')
 vim.opt.cursorline = true
-vim.g.gruvbox_contrast_dark = 'hard'
+vim.g.gruvbox_contrast_dark = 'soft'
 vim.cmd('colorscheme gruvbox')
 
