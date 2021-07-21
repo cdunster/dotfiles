@@ -2,14 +2,7 @@ lua require('plugins')
 lua require('startify')
 lua require('floaterm')
 lua require('vimspector')
-
-"------ VimWiki Settings ------
-let g:vimwiki_list = [{
-    \ 'path': '~/Dropbox/vimwiki',
-    \ 'syntax': 'markdown',
-    \ 'ext': '.md',
-    \ 'links_space_char': '_',
-    \ }]
+lua require('vimwiki')
 
 "------ Which Key Settings ------
 "Set the space bar to the leader key for custom commands.
