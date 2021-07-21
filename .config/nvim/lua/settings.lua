@@ -21,6 +21,7 @@ vim.opt.lcs:append('space:·')                   -- Show whitespace characters.
 vim.opt.hidden = true                           -- Keep buffers open in the background.
 vim.opt.signcolumn = 'yes'                      -- Always show the signcolumn.
 vim.opt.wrap = false                            -- Don't wrap long lines onto multiple lines.
+vim.opt.hlsearch = false                        -- Don't highlight search results.
 
 -- Needed by CoC plugin.
 vim.opt.backup = false          -- Disable creating file backups.
