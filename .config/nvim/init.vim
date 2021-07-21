@@ -1,13 +1,7 @@
 lua require('plugins')
 lua require('startify')
-
-"------ Floaterm Settings ------
-let g:floaterm_width = 0.9
-let g:floaterm_height = 0.9
-let g:floaterm_autoclose = 1
-
-"------ Vimspector Settings ------
-let g:vimspector_enable_mappings = 'HUMAN'
+lua require('floaterm')
+lua require('vimspector')
 
 "------ VimWiki Settings ------
 let g:vimwiki_list = [{
