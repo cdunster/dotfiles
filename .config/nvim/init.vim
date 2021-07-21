@@ -178,12 +178,5 @@ set statusline+=%{FugitiveHead()}                                           "Add
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-"Colour scheme.
-syntax on
-set t_Co=256
-set cursorline
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
-
 lua require('settings')
 

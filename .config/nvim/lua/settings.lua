@@ -33,3 +33,9 @@ vim.opt.cmdheight = 2           -- Increase height of the command line.
 vim.env.FZF_DEFAULT_COMMAND = 'fd --hidden --exclude .git --no-ignore'
 vim.env.TERM = 'alacritty'
 
+------ Colour scheme ------
+vim.cmd('syntax on')
+vim.opt.cursorline = true
+vim.g.gruvbox_contrast_dark = 'hard'
+vim.cmd('colorscheme gruvbox')
+
