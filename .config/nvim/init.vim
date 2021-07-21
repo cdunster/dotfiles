@@ -163,34 +163,38 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
-"------ Neovim settings. These are at the end to make sure they are set ------
-set ignorecase              "Enable case insensitive matching.
-set smartcase               "Enable smart-case matching (match case insensitively unless upper-case used).
-set tabstop=4               "Size of a tab.
-set softtabstop=4           "See multiple spaces as a tab.
-set expandtab               "Converts tabs to spaces.
-set shiftwidth=4            "Auto-indented width.
-set number relativenumber   "Enable line numbers.
-set wildmode=longest,list   "Enable bash-like tab completions.
-set foldmethod=marker       "Define folds with three braces in a comment.
-set termguicolors           "Enable full GUI colours in the terminal.
-set guifont=FiraCode\ Nerd\ Font\ Retina
-set mouse=a                 "Enable the mouse for all modes.
-set clipboard+=unnamedplus  "Use the system clipboard.
-set scrolloff=4             "Context lines around cursor when scrolling.
-set spell spelllang=en_gb   "Enable spell checking.
-set list lcs+=space:·       "Show whitespace characters.
-set hidden                  "Keep buffers open in the background.
-set signcolumn=yes          "Always show the signcolumn.
-set nohlsearch              "Disable highlighting the search results.
-set nowrap                  "Don't wrap long lines onto multiple lines.
+lua << EOF
+------ Neovim settings. These are at the end to make sure they are set ------
+vim.opt.ignorecase = true                       -- Enable case insensitive matching.
+vim.opt.smartcase = true                        -- Enable smart-case matching (match case insensitively unless upper-case used).
+vim.opt.tabstop = 4                             -- Size of a tab.
+vim.opt.softtabstop = 4                         -- See multiple spaces as a tab.
+vim.opt.expandtab = true                        -- Converts tabs to spaces.
+vim.opt.shiftwidth = 4                          -- Auto-indented width.
+vim.opt.number = true                           -- Enable line numbers.
+vim.opt.relativenumber = true                   -- Enable line numbers.
+vim.opt.wildmode = 'longest,list'               -- Enable bash-like tab completions.
+vim.opt.foldmethod = 'marker'                   -- Define folds with three braces in a comment.
+vim.opt.termguicolors = true                    -- Enable full GUI colours in the terminal.
+vim.opt.guifont = 'FiraCode Nerd Font Retina'   -- Set the font for the GUI vim.
+vim.opt.mouse = 'a'                             -- Enable the mouse for all modes.
+vim.opt.clipboard:append('unnamedplus')         -- Use the system clipboard.
+vim.opt.scrolloff = 4                           -- Context lines around cursor when scrolling.
+vim.opt.spell = true                            -- Enable spell checking.
+vim.opt.spelllang = 'en_gb'                     -- Enable spell checking.
+vim.opt.list = true                             -- Enable list mode which shows characters instead of whitespace.
+vim.opt.lcs:append('space:·')                   -- Show whitespace characters.
+vim.opt.hidden = true                           -- Keep buffers open in the background.
+vim.opt.signcolumn = 'yes'                      -- Always show the signcolumn.
+vim.opt.wrap = false                            -- Don't wrap long lines onto multiple lines.
 
-"Needed by CoC plugin.
-set nobackup                "Disable creating file backups.
-set nowritebackup           "Disable creating backups of files before writing.
-set updatetime=300          "Better user experience.
-set shortmess+=c            "Disable hit-enter prompts and other messages for ins-completion-menu.
-set cmdheight=2             "Increase height of the command line.
+-- Needed by CoC plugin.
+vim.opt.backup = false          -- Disable creating file backups.
+vim.opt.writebackup = false     -- Disable creating backups of files before writing.
+vim.opt.updatetime = 300        -- Better user experience.
+vim.opt.shortmess:append('c')   -- Disable hit-enter prompts and other messages for ins-completion-menu.
+vim.opt.cmdheight = 2           -- Increase height of the command line.
+EOF
 
 "Set the custom statusline.
 set statusline=                                                             "Clear the statusline.
@@ -214,6 +218,5 @@ set cursorline
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 
-"------ Environment Variables ------
-let $FZF_DEFAULT_COMMAND = 'fd --hidden --exclude .git --no-ignore'
-let $TERM = 'alacritty'
+lua require('settings')
+
