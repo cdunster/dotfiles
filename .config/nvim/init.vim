@@ -66,7 +66,7 @@ let g:which_key_map['/'] = [':Rg', 'fuzzy-search']
 let g:which_key_map[','] = [':Buffers', 'find-open-buffer']
 
 "Go to the homescreen, closing the current session.
-let g:which_key_map['h'] = [':SClose', 'close-session-go-home']
+let g:which_key_map['h'] = [':SClose | cd ~', 'close-session-go-home']
 
 "File commands.
 let g:which_key_map['f'] = {
