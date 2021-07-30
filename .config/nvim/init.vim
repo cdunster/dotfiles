@@ -54,7 +54,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 "Quit the current window. Closes Neovim if all windows are closed.
-let g:which_key_map['q'] = [':q', 'quit-window']
+let g:which_key_map['q'] = [':SClose | q', 'quit-window']
 
 "Find file in current directory with space space.
 let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
