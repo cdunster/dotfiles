@@ -27,6 +27,9 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 "------ Keybindings ------
+"Fix the Y keybinding.
+nnoremap Y y$
+
 "Window navigation with Ctrl and navigation keys.
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
