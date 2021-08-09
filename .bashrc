@@ -225,3 +225,4 @@ ex ()
 neofetch
 
 source /home/callum/.config/broot/launcher/bash/br
+. "$HOME/.cargo/env"
