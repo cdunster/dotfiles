@@ -16,7 +16,7 @@ return require('packer').startup(function()
     -- Floating terminal in Vim.
     use 'voldikss/vim-floaterm'
     -- Code completion.
-    use 'neoclide/coc.nvim'
+    use {'neoclide/coc.nvim', branch = 'release'}
     -- Which Key.
     use 'liuchengxu/vim-which-key'
     -- Start Screen.
