@@ -158,12 +158,17 @@ maximized=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
 calculator=['<Super>c']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>s'
 command='slack'
 name='Slack'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>n'
+command='nvim-qt'
+name='Neovim'
 
 [org/gnome/settings-daemon/plugins/xsettings]
 antialiasing='grayscale'
