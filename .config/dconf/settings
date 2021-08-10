@@ -150,6 +150,7 @@ initial-size=(954, 473)
 maximized=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
+calculator=['<Super>c']
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
