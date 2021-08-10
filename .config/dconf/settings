@@ -29,6 +29,9 @@ picture-uri='file:///usr/share/backgrounds/pop/kate-hazen-fractal-mountains.png'
 primary-color='#000000'
 secondary-color='#000000'
 
+[org/gnome/desktop/calendar]
+show-weekdate=true
+
 [org/gnome/desktop/input-sources]
 current=uint32 0
 per-window=false
@@ -37,6 +40,7 @@ xkb-options=@as []
 
 [org/gnome/desktop/interface]
 clock-format='24h'
+clock-show-weekday=true
 enable-hot-corners=true
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Pop'
