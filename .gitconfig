@@ -6,3 +6,7 @@
 	ff = only
 [core]
 	excludesFile = /home/callum/.gitignore_global
+[includeIf "gitdir:~/repos/work/"]
+    path = ~/repos/work/.gitconfig
+[includeIf "gitdir:~/repos/personal/"]
+    path = ~/repos/personal/.gitconfig

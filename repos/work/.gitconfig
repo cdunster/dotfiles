@@ -1,0 +1,6 @@
+[user]
+	name = Callum Dunster
+	email = callum.dunster@ev-box.com
+	signingkey = 49B44FC028458308
+[commit]
+	gpgsign = true
