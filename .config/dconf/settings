@@ -41,7 +41,9 @@ xkb-options=@as []
 [org/gnome/desktop/interface]
 clock-format='24h'
 clock-show-weekday=true
+document-font-name='Fira Code 11'
 enable-hot-corners=true
+font-name='Fira Code 10'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Pop'
 locate-pointer=true
@@ -98,6 +100,7 @@ switch-to-workspace-9=['<Super>9']
 [org/gnome/desktop/wm/preferences]
 button-layout='appmenu:close'
 num-workspaces=10
+titlebar-font='Fira Code Semi-Bold 10'
 
 [org/gnome/evolution-data-server]
 migrated=true
