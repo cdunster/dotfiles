@@ -35,8 +35,8 @@ vim.env.FZF_DEFAULT_COMMAND = 'fd --hidden --exclude .git --no-ignore'
 vim.env.TERM = 'alacritty'
 
 ------ Colour scheme ------
-vim.cmd('syntax on')
-vim.opt.cursorline = true
-vim.g.gruvbox_contrast_dark = 'soft'
-vim.cmd('colorscheme gruvbox')
+vim.cmd('syntax on')                -- Enable syntax highlighting.
+vim.opt.cursorline = true           -- Highlight the line the cursor is on.
+vim.opt.background = 'light'        -- Set the colourscheme background to light-mode.
+vim.cmd('colorscheme PaperColor')   -- Set the colorscheme.
 
