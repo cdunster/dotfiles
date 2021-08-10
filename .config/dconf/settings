@@ -186,6 +186,7 @@ toggle-stacking-global=@as []
 
 [org/gnome/shell/keybindings]
 focus-active-notification=@as []
+toggle-overview=['<Super>w']
 
 [org/gnome/system/location]
 enabled=false
