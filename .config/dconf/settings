@@ -93,6 +93,7 @@ switch-to-workspace-9=['<Super>9']
 
 [org/gnome/desktop/wm/preferences]
 button-layout='appmenu:close'
+num-workspaces=10
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -136,6 +137,7 @@ size=(1912, 998)
 state=87040
 
 [org/gnome/mutter]
+dynamic-workspaces=false
 experimental-features=@as []
 workspaces-only-on-primary=true
 
