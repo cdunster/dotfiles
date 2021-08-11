@@ -1,2 +1,4 @@
 notARepository: 'skip'
+gui:
+  showCommandLog: false
 
