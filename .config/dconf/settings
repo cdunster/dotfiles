@@ -156,6 +156,10 @@ search-filter-time-type='last_modified'
 initial-size=(954, 473)
 maximized=false
 
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-temperature=uint32 2700
+
 [org/gnome/settings-daemon/plugins/media-keys]
 calculator=['<Super>c']
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
