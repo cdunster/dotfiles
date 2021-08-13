@@ -29,7 +29,7 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/pop/kate-hazen-fractal-mountains.png'
+picture-uri='file:///usr/share/backgrounds/pop/kate-hazen-mort1mer.png'
 primary-color='#000000'
 secondary-color='#000000'
 
@@ -72,7 +72,7 @@ report-technical-problems=false
 color-shading-type='solid'
 lock-delay=uint32 0
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/pop/kate-hazen-fractal-mountains.png'
+picture-uri='file:///usr/share/backgrounds/pop/kate-hazen-mort1mer.png'
 primary-color='#000000'
 secondary-color='#000000'
 
