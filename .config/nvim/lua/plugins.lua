@@ -44,7 +44,5 @@ return require('packer').startup(function()
     use 'tpope/vim-commentary'
     -- Gruvbox colour scheme.
     use 'morhetz/gruvbox'
-    -- Papercolor colour scheme.
-    use 'NLKNguyen/papercolor-theme'
 end)
 
