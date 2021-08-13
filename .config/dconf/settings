@@ -4,6 +4,10 @@ window-maximized=false
 window-position=(4, 555)
 window-size=(954, 520)
 
+
+[org/gnome/calendar]
+active-view='month'
+
 [org/gnome/control-center]
 last-panel='keyboard'
 
