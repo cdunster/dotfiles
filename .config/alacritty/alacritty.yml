@@ -175,44 +175,66 @@ font:
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
-# Colors (Gruvbox light)
+
+# Colors (Seoul dark)
 colors:
   primary:
-    # hard contrast = '0xf9f5d7'
-    # medium contrast = '0xfbf1c7'
-    # soft contrast = '0xf2e5bc'
-    background: '0xfdfae6'
-    foreground: '0x3c3836'
+    background: '0x4b4b4b'
+    foreground: '0xd0d0d0'
   normal:
-    black:   '0xfbf1c7'
-    red:     '0xcc241d'
-    green:   '0x98971a'
-    yellow:  '0xd79921'
-    blue:    '0x458588'
-    magenta: '0xb16286'
-    cyan:    '0x689d6a'
-    white:   '0x928374'
+    black:    '0x3a3a3a'
+    red:      '0xd68787'
+    green:    '0x5f865f'
+    yellow:   '0xd8af5f'
+    blue:     '0x85add4'
+    magenta:  '0xd7afaf'
+    cyan:     '0x87afaf'
+    white:    '0xd0d0d0'
   bright:
-    black:   '0x928374'
-    red:     '0x9d0006'
-    green:   '0x79740e'
-    yellow:  '0xb57614'
-    blue:    '0x076678'
-    magenta: '0x8f3f71'
-    cyan:    '0x427b58'
-    white:   '0x3c3836'
+    black:    '0x626262'
+    red:      '0xd75f87'
+    green:    '0x87af87'
+    yellow:   '0xffd787'
+    blue:     '0xadd4fb'
+    magenta:  '0xffafaf'
+    cyan:     '0x87d7d7'
+    white:    '0xe4e4e4'
+
+# # Colors (Gruvbox light)
+# colors:
+#   primary:
+#     # hard contrast = '0xf9f5d7'
+#     # medium contrast = '0xfbf1c7'
+#     # soft contrast = '0xf2e5bc'
+#     background: '0xfdfae6'
+#     foreground: '0x3c3836'
+#   normal:
+#     black:   '0xfbf1c7'
+#     red:     '0xcc241d'
+#     green:   '0x98971a'
+#     yellow:  '0xd79921'
+#     blue:    '0x458588'
+#     magenta: '0xb16286'
+#     cyan:    '0x689d6a'
+#     white:   '0x928374'
+#   bright:
+#     black:   '0x928374'
+#     red:     '0x9d0006'
+#     green:   '0x79740e'
+#     yellow:  '0xb57614'
+#     blue:    '0x076678'
+#     magenta: '0x8f3f71'
+#     cyan:    '0x427b58'
+#     white:   '0x3c3836'
 
 # # Colors (Gruvbox dark)
 # colors:
-#   # Default colors
 #   primary:
 #     # hard contrast: background = '0x1d2021'
 #     # medium contrast: background = '0x282828'
 #     # soft contrast: background = '0x32302f'
 #     background: '0x32302f'
 #     foreground: '0xebdbb2'
-
-#   # Normal colors
 #   normal:
 #     black:   '0x282828'
 #     red:     '0xcc241d'
@@ -222,8 +244,6 @@ colors:
 #     magenta: '0xb16286'
 #     cyan:    '0x689d6a'
 #     white:   '0xa89984'
-
-#   # Bright colors
 #   bright:
 #     black:   '0x928374'
 #     red:     '0xfb4934'
