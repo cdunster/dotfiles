@@ -44,5 +44,7 @@ return require('packer').startup(function()
     use 'tpope/vim-commentary'
     -- Gruvbox colour scheme.
     use 'morhetz/gruvbox'
+    -- Seoul 256 colour scheme.
+    use 'junegunn/seoul256.vim'
 end)
 
