@@ -6,7 +6,7 @@ window-size=(954, 520)
 
 
 [org/gnome/calendar]
-active-view='month'
+active-view='week'
 
 [org/gnome/control-center]
 last-panel='keyboard'
