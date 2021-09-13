@@ -49,9 +49,9 @@ document-font-name='Fira Code 11'
 enable-hot-corners=false
 font-name='Fira Code 10'
 gtk-im-module='gtk-im-context-simple'
-locate-pointer=true
 gtk-theme='Pop-dark'
 icon-theme='Pop'
+locate-pointer=false
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
