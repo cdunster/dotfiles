@@ -220,6 +220,7 @@ pop-monitor-right=['<Shift><Super>Right', '<Shift><Super>KP_Right']
 pop-workspace-down=['<Shift><Super>Down', '<Shift><Super>KP_Down']
 pop-workspace-up=['<Shift><Super>Up', '<Shift><Super>KP_Up']
 show-title=false
+smart-gaps=true
 tile-by-default=true
 toggle-stacking-global=@as []
 
