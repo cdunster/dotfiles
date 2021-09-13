@@ -49,8 +49,9 @@ document-font-name='Fira Code 11'
 enable-hot-corners=false
 font-name='Fira Code 10'
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Pop'
 locate-pointer=true
+gtk-theme='Pop-dark'
+icon-theme='Pop'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
@@ -208,6 +209,9 @@ gap-outer=uint32 1
 show-title=false
 tile-by-default=true
 toggle-stacking-global=@as []
+
+[org/gnome/shell/extensions/user-theme]
+name='Pop-dark'
 
 [org/gnome/shell/keybindings]
 focus-active-notification=@as []
