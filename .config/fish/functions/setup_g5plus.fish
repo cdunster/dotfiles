@@ -6,13 +6,13 @@ function setup_g5plus
     send_diag 0x1040
 
     echo -e "\nWriting Product Variant ID\n----------------------------------------"
-    send_diag 0x1044 '0600'
+    send_diag 0x1044 '0A00'
 
     echo -e "\nWriting Product Number\n----------------------------------------"
     send_diag 0x1002 '001122334455667788990011'
 
     echo -e "\nSetting Number of Phases\n----------------------------------------"
-    send_diag 0x1216 0x03
+    send_diag 0x1216 0x01
 
     echo -e "\nSetting Critical Temperature Threshold\n----------------------------------------"
     send_diag 0x1017 '00009642'
