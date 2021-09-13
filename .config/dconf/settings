@@ -84,6 +84,10 @@ idle-delay=uint32 300
 allow-volume-above-100-percent=true
 
 [org/gnome/desktop/wm/keybindings]
+move-to-monitor-down=['<Shift><Super>j']
+move-to-monitor-left=['<Shift><Super>h']
+move-to-monitor-right=['<Shift><Super>l']
+move-to-monitor-up=['<Shift><Super>k']
 move-to-workspace-1=['<Shift><Super>1']
 move-to-workspace-10=['<Shift><Super>0']
 move-to-workspace-2=['<Shift><Super>2']
@@ -104,6 +108,8 @@ switch-to-workspace-6=['<Super>6']
 switch-to-workspace-7=['<Super>7']
 switch-to-workspace-8=['<Super>8']
 switch-to-workspace-9=['<Super>9']
+switch-to-workspace-down=['<Primary><Super>Down', '<Primary><Super>KP_Down']
+switch-to-workspace-up=['<Primary><Super>Up', '<Primary><Super>KP_Up']
 
 [org/gnome/desktop/wm/preferences]
 button-layout='appmenu:close'
@@ -209,6 +215,10 @@ show-workspaces-button=false
 [org/gnome/shell/extensions/pop-shell]
 gap-inner=uint32 1
 gap-outer=uint32 1
+pop-monitor-left=['<Shift><Super>Left', '<Shift><Super>KP_Left']
+pop-monitor-right=['<Shift><Super>Right', '<Shift><Super>KP_Right']
+pop-workspace-down=['<Shift><Super>Down', '<Shift><Super>KP_Down']
+pop-workspace-up=['<Shift><Super>Up', '<Shift><Super>KP_Up']
 show-title=false
 tile-by-default=true
 toggle-stacking-global=@as []
