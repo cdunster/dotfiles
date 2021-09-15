@@ -7,6 +7,7 @@ complete --command send_diag --exclusive --long timeout --short t --description 
 
 # Special subcommand
 complete --command send_diag --exclusive --condition __fish_use_subcommand --arguments factory --description "Put the Power Controller into factory mode"
+complete --command send_diag --exclusive --condition __fish_use_subcommand --arguments list --description "List the avaiable services in fzf"
 
 # Available services (from xml)
 complete --command send_diag --exclusive --description "get_firmware_version" --condition __fish_use_subcommand --arguments "0x1000"

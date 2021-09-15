@@ -7,7 +7,7 @@ function send_diag
             diag --serial=/dev/ttyUSB0 --powermode factory
             return
         case list
-            __send_diag_list_services
+            __send_diag_list_services | fzf
             return
     end
 
