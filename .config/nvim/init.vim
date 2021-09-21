@@ -99,7 +99,19 @@ let g:which_key_map['d'] = {
     \ }
 
 "Git commands and open LazyGit.
-let g:which_key_map['g'] = [':LazyGit', 'lazygit']
+let g:which_key_map['g'] = {
+    \ 'name': '+git',
+    \ 'g': [':LazyGit', 'lazygit-root'],
+    \ 's': [':Git', 'status'],
+    \ 'b': [':Git blame', 'blame-this-file'],
+    \ 'd': [':Gdiffsplit', 'diff-all-changes'],
+    \ 'f': {
+    \       'name': '+file',
+    \       'r': [':GRename', 'rename-file'],
+    \       'm': [':GMove', 'move-file'],
+    \       'd': [':GDelete', 'delete-file'],
+    \   },
+    \ }
 
 "Floaterm commands.
 let g:which_key_map['t'] = {
