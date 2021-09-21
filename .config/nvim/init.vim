@@ -65,6 +65,9 @@ let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
 "Fuzzy search with ripgrep.
 let g:which_key_map['/'] = [':Rg', 'fuzzy-search']
 
+"Jump to alternative file (usually previously edited buffer).
+let g:which_key_map['`'] = ['<C-^>', 'alternative-file']
+
 "Fuzzy search open buffers.
 let g:which_key_map[','] = [':Buffers', 'find-open-buffer']
 
