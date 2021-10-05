@@ -21,9 +21,15 @@ vim.g.startify_custom_header = vim.fn['startify#center']({
 
 vim.g.startify_lists = {
     { type = 'sessions',  header = {'   Sessions'}       },
+    { type = 'commands',  header = {'   Commands'}       },
     { type = 'bookmarks', header = {'   Bookmarks'}      },
     { type = 'files',     header = {'   Recent Files'}            },
     { type = 'dir',       header = {'   Files in ' .. vim.fn.getcwd()} },
-    { type = 'commands',  header = {'   Commands'}       }
+}
+
+vim.g.startify_commands = {
+    { g = { 'G5+', 'SLoad G5+' } },
+    { r = { 'RACE', 'SLoad RACE' } },
+    { w = { 'Vimwiki', 'VimwikiIndex' } },
 }
 
