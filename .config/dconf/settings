@@ -49,7 +49,7 @@ document-font-name='Fira Code 11'
 enable-hot-corners=false
 font-name='Fira Code 10'
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Pop-dark'
+gtk-theme='Pop'
 icon-theme='Pop'
 locate-pointer=false
 show-battery-percentage=true
@@ -225,7 +225,7 @@ tile-by-default=true
 toggle-stacking-global=@as []
 
 [org/gnome/shell/extensions/user-theme]
-name='Pop-dark'
+name='Pop'
 
 [org/gnome/shell/keybindings]
 focus-active-notification=@as []
