@@ -46,5 +46,7 @@ return require('packer').startup(function()
     use 'morhetz/gruvbox'
     -- Seoul 256 colour scheme.
     use 'junegunn/seoul256.vim'
+    -- PICO-8 support.
+    use 'Bakudankun/PICO-8.vim'
 end)
 
