@@ -6,6 +6,8 @@ vim.g.startify_change_to_vcs_root = 1
 vim.g.startify_fortune_use_unicode = 1
 -- Do not show empty buffer or quit links on the welcome page.
 vim.g.startify_enable_special = 0
+-- Sort the session list by recently used instead of alphabetically.
+vim.g.startify_session_sort = 1
 
 vim.g.startify_custom_header = vim.fn['startify#center']({
     [[ ╔══╗ ╔══╦═══════╦══╗    ╔══╗    ╔═══════╗    ╔══╗ ╔══╦═══════╦═══════╦══╗    ╔══════╗╔══╗ ]],
