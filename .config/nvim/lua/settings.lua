@@ -22,6 +22,7 @@ vim.opt.hidden = true                           -- Keep buffers open in the back
 vim.opt.signcolumn = 'yes'                      -- Always show the signcolumn.
 vim.opt.wrap = false                            -- Don't wrap long lines onto multiple lines.
 vim.opt.hlsearch = false                        -- Don't highlight search results.
+vim.opt.timeoutlen = 300                        -- Set the timeout length for Neovim. (Used by things like WhichKey).
 
 -- Needed by CoC plugin.
 vim.opt.backup = false          -- Disable creating file backups.

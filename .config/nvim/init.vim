@@ -3,28 +3,7 @@ lua require('startify')
 lua require('floaterm')
 lua require('vimspector')
 lua require('vimwiki')
-
-"------ Which Key Settings ------
-"Set the space bar to the leader key for custom commands.
-let g:mapleader=' '
-
-"Set up Which Key.
-call which_key#register('<Space>', "g:which_key_map")
-nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
-let g:which_key_map =  {}
-let g:which_key_use_floating_win = 0
-
-"Set Which Key colours.
-highlight default link WhichKey          Operator
-highlight default link WhichKeySeperator DiffAdded
-highlight default link WhichKeyGroup     Identifier
-highlight default link WhichKeyDesc      Function
-
-"Hide the statusline when Which Key is enabled.
-autocmd! FileType which_key
-autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+lua require('keybindings')
 
 "------ Keybindings ------
 "Fix the Y keybinding.
@@ -55,81 +34,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-"Quit the current window. Closes Neovim if all windows are closed.
-let g:which_key_map['q'] = [':SClose | q', 'quit-window']
-
-"Find file in current directory with space space.
-let g:which_key_map[' '] = [':Files', 'find-files-current-dir']
-
-"Fuzzy search with ripgrep.
-let g:which_key_map['/'] = [':Rg', 'fuzzy-search']
-
-"Jump to alternative file (usually previously edited buffer).
-let g:which_key_map['`'] = ['<C-^>', 'alternative-file']
-
-"Fuzzy search open buffers.
-let g:which_key_map[','] = [':Buffers', 'find-open-buffer']
-
-"Go to the homescreen, closing the current session.
-let g:which_key_map['h'] = [':SClose | cd ~', 'close-session-go-home']
-
-"File commands.
-let g:which_key_map['f'] = {
-    \ 'name': '+files',
-    \ 'f': [':Files ~', 'fuzzy-find-file'],
-    \ 's': [':w', 'save-current-buffer'],
-    \ 'S': [':wa', 'save-all-buffers'],
-    \ '/': [':BLines', 'fuzzy-search-in-file'],
-    \ '?': [':Lines', 'fuzzy-search-in-open-buffers'],
-    \ }
-
-"Buffer commands.
-let g:which_key_map['b'] = {
-    \ 'name': '+buffer',
-    \ 'k': [':bd', 'kill-current-buffer'],
-    \ 'K': [':bd!', 'kill-current-buffer-no-save'],
-    \ }
-
-"Edit and commit dotfiles.
-let g:which_key_map['d'] = {
-    \ 'name': '+dotfiles',
-    \ 'g': [':FloatermNew lazygit -w ~ -g ~/.cfg', 'lazygit-dotfiles'],
-    \ 'v': [':e ~/.config/nvim/init.vim', 'init.vim'],
-    \ }
-
-"Git commands and open LazyGit.
-let g:which_key_map['g'] = {
-    \ 'name': '+git',
-    \ 'g': [':LazyGit', 'lazygit-root'],
-    \ 's': [':Git', 'status'],
-    \ 'b': [':Git blame', 'blame-this-file'],
-    \ 'd': [':Gdiffsplit', 'diff-all-changes'],
-    \ 'f': {
-    \       'name': '+file',
-    \       'r': [':GRename', 'rename-file'],
-    \       'm': [':GMove', 'move-file'],
-    \       'd': [':GDelete', 'delete-file'],
-    \   },
-    \ }
-
-"Floaterm commands.
-let g:which_key_map['t'] = {
-    \ 'name': '+terminal',
-    \ 'n': [':terminal', 'new-terminal'],
-    \ 'f': [':FloatermNew', 'new-terminal-floating'],
-    \ 'b': [':FloatermNew --wintype=split --height=0.2', 'new-terminal-bottom'],
-    \ }
-
-"Code commands through CoC plugin.
-let g:which_key_map['c'] = {
-    \ 'name': '+code',
-    \ 'r': ['<Plug>(coc-rename)', 'rename'],
-    \ 'a': ['<Plug>(coc-codeaction-line)', 'code-actions'],
-    \ 'e': [':CocList diagnostics', 'list-errors'],
-    \ 'o': [':CocList outline', 'code-outline'],
-    \ 's': [':CocList -I symbols', 'list-symbols'],
-    \ }
 
 "------ CoC Code Completion and Documentation ------
 "Use tab for trigger completion with characters ahead and navigate.

@@ -18,7 +18,15 @@ return require('packer').startup(function()
     -- Code completion.
     use {'neoclide/coc.nvim', branch = 'release'}
     -- Which Key.
-    use 'liuchengxu/vim-which-key'
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {
+            plugins = { spelling = true },
+            key_labels = { ["<leader>"] = "SPC" },
+        }
+      end
+    }
     -- Start Screen.
     use 'mhinz/vim-startify'
     -- FZF fuzzy file searcher.
