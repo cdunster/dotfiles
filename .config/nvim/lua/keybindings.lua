@@ -94,8 +94,12 @@ wk.register({
         name = "+dotfiles",
         ["g"] = { "<cmd>FloatermNew lazygit -w ~ -g ~/.cfg<cr>", "lazygit-dotfiles" },
         ["f"] = { "<cmd>Files ~/.config<cr>", "find-dotfile" },
-        ["n"] = { "<cmd>Files ~/.config/nvim<cr>", "find-nvim-dotfile" },
-        ["v"] = { "<cmd>e ~/.config/nvim/init.lua<cr>", "init.lua" },
+        ["n"] = {
+            name = "+neovim",
+            ["f"] = { "<cmd>Files ~/.config/nvim<cr>", "find-nvim-dotfile" },
+            ["i"] = { "<cmd>e ~/.config/nvim/init.lua<cr>", "init" },
+            ["p"] = { "<cmd>e ~/.config/nvim/lua/plugins.lua<cr>", "plugins" },
+        },
     },
 
     ["g"] = {
