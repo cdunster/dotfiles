@@ -9,4 +9,4 @@ wk.register({
     ["r"] = { "<cmd>Crun<cr>", "Cargo run" },
     ["t"] = { "<cmd>Ctest<cr>", "Cargo test" },
     ["T"] = { "<cmd>RustTest<cr>", "Run test under cursor" },
-}, { prefix = "<localleader>" })
+}, { prefix = "<localleader>", buffer = 0 })

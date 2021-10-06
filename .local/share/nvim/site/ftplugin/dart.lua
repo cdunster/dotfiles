@@ -11,4 +11,4 @@ wk.register({
     ["r"] = { "<cmd>FlutterHotReload<cr>", "Hot reload" },
     ["R"] = { "<cmd>FlutterHotRestart<cr>", "Hot restart" },
     ["q"] = { "<cmd>FlutterQuit<cr>", "Quit app" },
-}, { prefix = "<localleader>" })
+}, { prefix = "<localleader>", buffer = 0 })

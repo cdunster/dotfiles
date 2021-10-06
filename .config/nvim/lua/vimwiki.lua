@@ -5,7 +5,6 @@ vim.g.vimwiki_list = {{
     links_space_char = '_'
 }}
 
-
 local wk = require("which-key")
 
 --Vimwiki key bindings for <leader>+w.
