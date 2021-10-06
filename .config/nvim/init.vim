@@ -5,26 +5,6 @@ lua require('vimspector')
 lua require('vimwiki')
 lua require('keybindings')
 
-"------ Keybindings ------
-"Fix the Y keybinding.
-nnoremap Y y$
-
-"Window navigation with Ctrl and navigation keys.
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-"Navigate errors.
-nmap <silent> [e <Plug>(coc-diagnostic-prev)
-nmap <silent> ]e <Plug>(coc-diagnostic-next)
-
-"Code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
 "------ CoC Code Completion and Documentation ------
 "Use tab for trigger completion with characters ahead and navigate.
 "NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by

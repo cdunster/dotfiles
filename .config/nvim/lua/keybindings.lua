@@ -3,6 +3,30 @@ vim.g.mapleader = ' '
 
 local wk = require("which-key")
 
+--Fix the Y keybinding.
+vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
+
+--Window navigation with Ctrl and navigation keys.
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
+
+--Navigate errors.
+wk.register({
+    ['[e'] = { '<Plug>(coc-diagnostic-prev)', 'previous-error' },
+    [']e'] = { '<Plug>(coc-diagnostic-next)', 'next-error' },
+})
+
+--Code navigation. With g prefix.
+wk.register({
+    ['d'] = { '<Plug>(coc-definition)', 'goto-definition' },
+    ['y'] = { '<Plug>(coc-type-definition)', 'goto-type-definition' },
+    ['i'] = { '<Plug>(coc-implementation)', 'goto-implementation' },
+    ['r'] = { '<Plug>(coc-references)', 'list-references' },
+}, { prefix = 'g' })
+
+--Leader prefixed key bindings.
 wk.register({
     ['q'] = { '<cmd>SClose | q<cr>', 'quit-neovim' },
     ['<leader>'] = { '<cmd>Files<cr>', 'list-files-current-dir' },
