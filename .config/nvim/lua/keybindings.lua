@@ -12,6 +12,14 @@ vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true })
 
+wk.register({
+    ["gc"] = {
+        name = "+Comment out/in",
+        ["c"] = "Comment out/in line",
+        ["u"] = "Comment out/in line",
+    }
+})
+
 --Leader prefixed key bindings.
 wk.register({
     ["q"] = { "<cmd>SClose | q<cr>", "Quit Neovim" },
