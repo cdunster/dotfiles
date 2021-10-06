@@ -19,6 +19,12 @@ function show_documentation()
     end
 end
 
+--Trigger CoC completion with Ctrl+Space.
+vim.api.nvim_set_keymap("i", "<C-space>", "coc#refresh()", { noremap = true, expr = true, silent = true })
+
+--Make <enter> select first completion item.
+vim.api.nvim_set_keymap("i", "<CR>", "pumvisible() ? coc#_select_confirm() : '<C-g>u<CR><c-r>=coc#on_enter()<CR>'", { noremap = true, expr = true, silent = true })
+
 --Window navigation with Ctrl and navigation keys.
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })

@@ -5,14 +5,6 @@ lua require('vimspector')
 lua require('vimwiki')
 lua require('keybindings')
 
-"------ CoC Code Completion and Documentation ------
-"Use <C-SPACE> to trigger completion.
-inoremap <silent><expr> <C-SPACE> coc#refresh()
-
-"Make the enter key auto-select the first completion item and notify coc.nvim to format on enter.
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 "------ CoC Code Highlights and Selection ------
 "Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
