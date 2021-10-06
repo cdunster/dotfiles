@@ -25,6 +25,10 @@ vim.api.nvim_set_keymap("i", "<C-space>", "coc#refresh()", { noremap = true, exp
 --Make <enter> select first completion item.
 vim.api.nvim_set_keymap("i", "<CR>", "pumvisible() ? coc#_select_confirm() : '<C-g>u<CR><c-r>=coc#on_enter()<CR>'", { noremap = true, expr = true, silent = true })
 
+--Navigate CoC Completion list with Tab and Shift+Tab.
+vim.api.nvim_set_keymap("i", "<TAB>", "pumvisible() ? '<C-n>' : '<TAB>'", { noremap = true, expr = true, silent = true })
+vim.api.nvim_set_keymap("i", "<S-TAB>", "pumvisible() ? '<C-p>' : '<S-TAB>'", { noremap = true, expr = true, silent = true })
+
 --Window navigation with Ctrl and navigation keys.
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
