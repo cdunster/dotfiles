@@ -13,21 +13,21 @@ end
 return require("packer").startup(function()
     -- Packer can manage itself.
     use "wbthomason/packer.nvim"
+    -- Which Key.
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup {
+                plugins = { spelling = true },
+                key_labels = { ["<leader>"] = "SPC", ["<space>"] = "SPC" },
+                layout = { spacing = 5 },
+            }
+        end
+    }
     -- Floating terminal in Vim.
     use "voldikss/vim-floaterm"
     -- Code completion.
     use { "neoclide/coc.nvim", branch = "release" }
-    -- Which Key.
-    use {
-      "folke/which-key.nvim",
-      config = function()
-        require("which-key").setup {
-            plugins = { spelling = true },
-            key_labels = { ["<leader>"] = "SPC", ["<space>"] = "SPC" },
-            layout = { spacing = 5 },
-        }
-      end
-    }
     -- Start Screen.
     use "mhinz/vim-startify"
     -- FZF fuzzy file searcher.
