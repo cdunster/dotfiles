@@ -1,10 +1,5 @@
 require("plugins")
 require("keybindings")
-require("startify")
-require("floaterm")
-require("vimwiki")
-require("coc")
-require("vimspector")
 require("statusline")
 require("settings")
 

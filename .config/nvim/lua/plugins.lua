@@ -25,11 +25,21 @@ return require("packer").startup(function()
         end
     }
     -- Floating terminal in Vim.
-    use "voldikss/vim-floaterm"
+    use {
+        "voldikss/vim-floaterm",
+        config = function() require("floaterm") end,
+    }
     -- Code completion.
-    use { "neoclide/coc.nvim", branch = "release" }
+    use {
+        "neoclide/coc.nvim",
+        branch = "release",
+        config = function() require("coc") end,
+    }
     -- Start Screen.
-    use "mhinz/vim-startify"
+    use {
+        "mhinz/vim-startify",
+        config = function() require("startify") end,
+    }
     -- FZF fuzzy file searcher.
     use "junegunn/fzf"
     use "junegunn/fzf.vim"
@@ -46,9 +56,15 @@ return require("packer").startup(function()
     -- Flutter support with commands.
     use "thosakwe/vim-flutter"
     -- VimWiki for note-taking.
-    use "vimwiki/vimwiki"
+    use {
+        "vimwiki/vimwiki",
+        config = function() require("vimwiki") end,
+    }
     -- For debugging programmes in Neovim.
-    use "puremourning/vimspector"
+    use {
+        "puremourning/vimspector",
+        config = function() require("vimspector") end,
+    }
     -- Comment-out lines.
     use "tpope/vim-commentary"
     -- Gruvbox colour scheme.
