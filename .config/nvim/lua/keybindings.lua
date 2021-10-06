@@ -26,6 +26,23 @@ wk.register({
     ['r'] = { '<Plug>(coc-references)', 'list-references' },
 }, { prefix = 'g' })
 
+
+--Map function and class text objects
+--NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+wk.register({
+    ['if'] = { '<Plug>(coc-funcobj-i)', 'inside function' },
+    ['af'] = { '<Plug>(coc-funcobj-a)', 'around function' },
+    ['ic'] = { '<Plug>(coc-classobj-i)', 'inside class' },
+    ['ac'] = { '<Plug>(coc-classobj-a)', 'around class' },
+}, { mode = "x" })
+
+wk.register({
+    ['if'] = { '<Plug>(coc-funcobj-i)', 'inside function' },
+    ['af'] = { '<Plug>(coc-funcobj-a)', 'around function' },
+    ['ic'] = { '<Plug>(coc-classobj-i)', 'inside class' },
+    ['ac'] = { '<Plug>(coc-classobj-a)', 'around class' },
+}, { mode = "o" })
+
 --Leader prefixed key bindings.
 wk.register({
     ['q'] = { '<cmd>SClose | q<cr>', 'quit-neovim' },
