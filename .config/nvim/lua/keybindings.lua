@@ -6,6 +6,19 @@ local wk = require("which-key")
 --Fix the Y keybinding.
 vim.api.nvim_set_keymap("n", "Y", "y$", { noremap = true })
 
+--Use K to show documentation in preview window.
+vim.api.nvim_set_keymap("n", "K", "<cmd>lua show_documentation()<cr>", { noremap = true })
+
+function show_documentation()
+    if vim.bo.filetype == "vim" or vim.bo.filetype == "help" then
+        vim.api.nvim_command("execute 'h '.expand('<cword>')")
+    elseif vim.fn["coc#rpc#ready()"] then
+        vim.fn.CocActionAsync("doHover")
+    else
+        vim.api.nvim_command("execute '!' . &keywordprg . ' ' . expand('<cword>')")
+    end
+end
+
 --Window navigation with Ctrl and navigation keys.
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
