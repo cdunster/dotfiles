@@ -4,6 +4,7 @@ require("floaterm")
 require("vimspector")
 require("vimwiki")
 require("keybindings")
+require("coc")
 require("statusline")
 require("settings")
 
