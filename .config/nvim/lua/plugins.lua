@@ -66,7 +66,19 @@ return require("packer").startup(function()
         config = function() require("vimspector") end,
     }
     -- Comment-out lines.
-    use "tpope/vim-commentary"
+    use {
+        "tpope/vim-commentary",
+        config = function()
+            local wk = require("which-key")
+            wk.register({
+                ["gc"] = {
+                    name = "+Comment out/in",
+                    ["c"] = "Comment out/in line",
+                    ["u"] = "Comment out/in line",
+                }
+            })
+        end
+    }
     -- Gruvbox colour scheme.
     use "morhetz/gruvbox"
     -- Seoul 256 colour scheme.
