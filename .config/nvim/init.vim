@@ -5,8 +5,8 @@ lua require('vimspector')
 lua require('vimwiki')
 lua require('keybindings')
 lua require('statusline')
+lua require('settings')
 
-"------ CoC Code Highlights and Selection ------
 "Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
@@ -16,6 +16,4 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
-
-lua require('settings')
 
