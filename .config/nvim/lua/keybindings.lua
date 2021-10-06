@@ -1,6 +1,9 @@
 --Set the space bar to the leader key for custom commands.
 vim.g.mapleader = " "
 
+--Set the comma key to the local leader key for custom commands.
+vim.g.maplocalleader = ","
+
 local wk = require("which-key")
 
 --Fix the Y keybinding.
