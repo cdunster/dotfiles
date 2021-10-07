@@ -24,6 +24,19 @@ return require("packer").startup(function()
             }
         end
     }
+    -- Tree-sitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
+    }
+    -- Telescope
+    use {
+        "nvim-telescope/telescope.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
+    }
     -- Floating terminal in Vim.
     use {
         "voldikss/vim-floaterm",
@@ -40,9 +53,6 @@ return require("packer").startup(function()
         "mhinz/vim-startify",
         config = require("config.startify").config(),
     }
-    -- FZF fuzzy file searcher.
-    use "junegunn/fzf"
-    use "junegunn/fzf.vim"
     -- Open LazyGit in a floating window.
     use "kdheepak/lazygit.nvim"
     -- Git commands.

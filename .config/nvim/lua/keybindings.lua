@@ -20,34 +20,32 @@ wk.register({
 --Leader prefixed key bindings.
 wk.register({
     ["q"] = { "<cmd>SClose | q<cr>", "Quit Neovim" },
-    ["<leader>"] = { "<cmd>Files<cr>", "Find a file in working dir" },
-    ["/"] = { "<cmd>Rg<cr>", "Search in files in working dir" },
+    ["<leader>"] = { "<cmd>lua require('config.telescope').project_files()<cr>", "Find a file in working dir" },
+    ["/"] = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Search in files in working dir" },
     ["`"] = { "<C-^>", "Go to alternative file" },
-    [","] = { "<cmd>Buffers<cr>", "List open buffers" },
+    [","] = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "List open buffers" },
     ["h"] = { "<cmd>SClose | cd ~<cr>", "Close session and go home" },
 
     ["f"] = {
         name = "+files",
-        ["f"] = { "<cmd>Files ~<cr>", "Find a file" },
+        ["f"] = { "<cmd>lua require('telescope.builtin').find_files({ cwd = '~' })<cr>", "Find a file" },
         ["s"] = { "<cmd>w<cr>", "Save current buffer" },
         ["S"] = { "<cmd>wa<cr>", "Save all buffers" },
-        ["/"] = { "<cmd>BLines<cr>", "Search in buffer" },
-        ["?"] = { "<cmd>Lines<cr>", "Search in open buffers" },
     },
 
     ["b"] = {
         name = "+buffer",
-        ["k"] = { "<cmd>bd<cr>", "kill current buffer" },
-        ["K"] = { "<cmd>bd!<cr>", "kill current buffer without saving" },
+        ["k"] = { "<cmd>bd<cr>", "Kill current buffer" },
+        ["K"] = { "<cmd>bd!<cr>", "Kill current buffer without saving" },
     },
 
     ["d"] = {
         name = "+dotfiles",
         ["g"] = { "<cmd>FloatermNew lazygit -w ~ -g ~/.cfg<cr>", "Open lazygit in dotfiles dir" },
-        ["f"] = { "<cmd>Files ~/.config<cr>", "Find a dotfile" },
+        ["f"] = { "<cmd>lua require('telescope.builtin').find_files({ cwd = '~/.config' })<cr>", "Find a dotfile" },
         ["n"] = {
             name = "+neovim",
-            ["f"] = { "<cmd>Files ~/.config/nvim<cr>", "Find a Neovim dotfile" },
+            ["f"] = { "<cmd>lua require('telescope.builtin').find_files({ cwd = '~/.config/nvim' })<cr>", "Find a Neovim dotfile" },
             ["i"] = { "<cmd>e ~/.config/nvim/init.lua<cr>", "Open Neovim init dotfile" },
             ["p"] = { "<cmd>e ~/.config/nvim/lua/plugins.lua<cr>", "Open Neovim plugins dotfile" },
         },
