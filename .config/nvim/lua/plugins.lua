@@ -27,18 +27,18 @@ return require("packer").startup(function()
     -- Floating terminal in Vim.
     use {
         "voldikss/vim-floaterm",
-        config = function() require("floaterm") end,
+        config = function() require("config.floaterm") end,
     }
     -- Code completion.
     use {
         "neoclide/coc.nvim",
         branch = "release",
-        config = function() require("coc") end,
+        config = function() require("config.coc") end,
     }
     -- Start Screen.
     use {
         "mhinz/vim-startify",
-        config = function() require("startify") end,
+        config = function() require("config.startify") end,
     }
     -- FZF fuzzy file searcher.
     use "junegunn/fzf"
@@ -58,12 +58,12 @@ return require("packer").startup(function()
     -- VimWiki for note-taking.
     use {
         "vimwiki/vimwiki",
-        config = function() require("vimwiki") end,
+        config = function() require("config.vimwiki") end,
     }
     -- For debugging programmes in Neovim.
     use {
         "puremourning/vimspector",
-        config = function() require("vimspector") end,
+        config = function() require("config.vimspector") end,
     }
     -- Comment-out lines.
     use {
