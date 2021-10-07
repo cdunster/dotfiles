@@ -24,6 +24,7 @@ wk.register({
     ["/"] = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Search in files in working dir" },
     ["`"] = { "<C-^>", "Go to alternative file" },
     [","] = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "List open buffers" },
+    [";"] = { "<cmd>lua require('telescope.builtin').resume()<cr>", "Resume the last telescope picker" },
     ["h"] = { "<cmd>SClose | cd ~<cr>", "Close session and go home" },
 
     ["f"] = {

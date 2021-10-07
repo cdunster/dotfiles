@@ -37,16 +37,15 @@ return require("packer").startup(function()
             "nvim-treesitter/nvim-treesitter",
         },
     }
+    -- LSP
+    use {
+        "neovim/nvim-lspconfig",
+        config = require("config.lsp").config(),
+    }
     -- Floating terminal in Vim.
     use {
         "voldikss/vim-floaterm",
         config = require("config.floaterm").config(),
-    }
-    -- Code completion.
-    use {
-        "neoclide/coc.nvim",
-        branch = "release",
-        config = require("config.coc").config(),
     }
     -- Start Screen.
     use {

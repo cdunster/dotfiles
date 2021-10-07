@@ -3,9 +3,6 @@ require("keybindings")
 require("statusline")
 require("settings")
 
---Highlight the symbol and its references when holding the cursor.
-vim.api.nvim_exec("autocmd CursorHold * silent call CocActionAsync('highlight')", false)
-
 --Toggle the line number mode in different situations.
 vim.api.nvim_exec([[
 :augroup numbertoggle
