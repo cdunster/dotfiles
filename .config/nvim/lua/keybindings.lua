@@ -6,14 +6,16 @@ vim.g.maplocalleader = ","
 
 local wk = require("which-key")
 
---Fix the Y keybinding.
-vim.api.nvim_set_keymap("n", "Y", "y$", { noremap = true })
+wk.register({
+    --Fix the Y keybinding.
+    ["Y"] = { "y$", "Yank to end of line" },
 
---Window navigation with Ctrl and navigation keys.
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true })
+    --Window navigation with Ctrl and navigation keys.
+    ["<C-h>"] = { "<C-w>h", "Go to window on the left" },
+    ["<C-j>"] = { "<C-w>j", "Go to window below" },
+    ["<C-k>"] = { "<C-w>k", "Go to window above" },
+    ["<C-l>"] = { "<C-w>l", "Go to window on the right" },
+})
 
 --Leader prefixed key bindings.
 wk.register({

@@ -1,7 +1,9 @@
 local wk = require("which-key")
 
 --Use K to show documentation in preview window.
-vim.api.nvim_set_keymap("n", "K", "<cmd>lua show_documentation()<cr>", { noremap = true })
+wk.register({
+    ["K"] = { "<cmd>lua show_documentation()<cr>", "Peek token documentation" },
+})
 
 function show_documentation()
     if vim.bo.filetype == "vim" or vim.bo.filetype == "help" then
@@ -13,15 +15,15 @@ function show_documentation()
     end
 end
 
---Trigger CoC completion with Ctrl+Space.
-vim.api.nvim_set_keymap("i", "<C-space>", "coc#refresh()", { noremap = true, expr = true, silent = true })
-
---Make <enter> select first completion item.
-vim.api.nvim_set_keymap("i", "<CR>", "pumvisible() ? coc#_select_confirm() : '<C-g>u<CR><c-r>=coc#on_enter()<CR>'", { noremap = true, expr = true, silent = true })
-
---Navigate CoC Completion list with Tab and Shift+Tab.
-vim.api.nvim_set_keymap("i", "<TAB>", "pumvisible() ? '<C-n>' : '<TAB>'", { noremap = true, expr = true, silent = true })
-vim.api.nvim_set_keymap("i", "<S-TAB>", "pumvisible() ? '<C-p>' : '<S-TAB>'", { noremap = true, expr = true, silent = true })
+wk.register({
+    --Trigger CoC completion with Ctrl+Space in insert mode.
+    ["<C-space>"] = { "coc#refresh()", "Open CoC completion" },
+    --Make <enter> select first completion item.
+    ["<CR>"] = { "pumvisible() ? coc#_select_confirm() : '<C-g>u<CR><c-r>=coc#on_enter()<CR>'", "CoC confirm selection" },
+    --Navigate CoC Completion list with Tab and Shift+Tab.
+    ["<TAB>"] = { "pumvisible() ? '<C-n>' : '<TAB>'", "Select next CoC item" },
+    ["<S-TAB>"] = { "pumvisible() ? '<C-p>' : '<S-TAB>'", "Select previous CoC item" },
+}, { mode = "i", expr = true, silent = true })
 
 --Navigate errors.
 wk.register({
