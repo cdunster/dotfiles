@@ -14,10 +14,6 @@ wk.register({
     ["t"] = "Open default wiki index file in new tab",
     ["s"] = "List available wiki index files",
     ["i"] = "Open default diary index file",
---     ["d"] = "Delete this wiki file",
---     ["r"] = "Rename this wiki file",
---     ["h"] = "Generate HTML from wiki",
---     ["n"] = "Go to wiki entry",
 }, { prefix = "<leader>w"})
 
 --Vimwiki diary key bindings for <leader>+w+<leader>.
@@ -29,5 +25,3 @@ wk.register({
     ["m"] = "Open tomorrow's entry",
     ["y"] = "Open yesterday's entry",
 }, { prefix = "<leader>w<leader>"})
-
---TODO Add descriptions for when in vimwiki.
