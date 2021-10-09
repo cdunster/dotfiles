@@ -37,9 +37,23 @@ return require("packer").startup(function()
             "nvim-treesitter/nvim-treesitter",
         },
     }
+    -- Autocompletion
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-vsnip",
+            "hrsh7th/vim-vsnip",
+        },
+        config = require("config.cmp").config(),
+    }
     -- LSP
     use {
         "neovim/nvim-lspconfig",
+        requires = {
+            "hrsh7th/nvim-cmp",
+            "hrsh7th/cmp-nvim-lsp",
+        },
         config = require("config.lsp").config(),
     }
     -- Floating terminal in Vim.
