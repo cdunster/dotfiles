@@ -27,7 +27,8 @@ return require("packer").startup(function()
     -- Tree-sitter
     use {
         "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate"
+        branch = "0.5-compat",
+        run = ":TSUpdate",
     }
     -- Telescope
     use {
