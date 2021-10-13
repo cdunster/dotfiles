@@ -9,16 +9,6 @@ local on_attach = function(client, bufnr)
         ["K"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Peek token documentation" },
     })
 
-    -- wk.register({
-        --Trigger completion with Ctrl+Space in insert mode.
-        -- TODO ["<C-space>"] = { "coc#refresh()", "Open CoC completion" },
-        --Make <enter> select first completion item.
-        -- TODO ["<CR>"] = { "pumvisible() ? coc#_select_confirm() : '<C-g>u<CR><c-r>=coc#on_enter()<CR>'", "CoC confirm selection" },
-        --Navigate CoC Completion list with Tab and Shift+Tab.
-        -- TODO ["<TAB>"] = { "pumvisible() ? '<C-n>' : '<TAB>'", "Select next CoC item" },
-        -- TODO ["<S-TAB>"] = { "pumvisible() ? '<C-p>' : '<S-TAB>'", "Select previous CoC item" },
-    -- }, { mode = "i", expr = true, silent = true })
-
     --Navigate errors.
     wk.register({
         ["[e"] = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", "Go to previous error" },
