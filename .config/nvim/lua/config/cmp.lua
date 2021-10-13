@@ -22,6 +22,7 @@ M.config = function()
             { name = 'vsnip' },
             { name = "path" },
             { name = "buffer" },
+            { name = "spell" },
         },
     })
 end

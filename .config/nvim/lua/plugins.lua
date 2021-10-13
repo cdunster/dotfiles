@@ -48,6 +48,7 @@ return require("packer").startup(function()
         requires = {
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
+            "f3fora/cmp-spell",
             "hrsh7th/cmp-vsnip",
             "hrsh7th/vim-vsnip",
         },
