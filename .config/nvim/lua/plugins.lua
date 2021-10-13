@@ -29,6 +29,9 @@ return require("packer").startup(function()
         "nvim-treesitter/nvim-treesitter",
         branch = "0.5-compat",
         run = ":TSUpdate",
+        requires = {
+            { "nvim-treesitter/nvim-treesitter-textobjects", branch = "0.5-compat" },
+        },
         config = require("config.treesitter").config(),
     }
     -- Telescope

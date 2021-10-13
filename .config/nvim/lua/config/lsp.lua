@@ -23,22 +23,6 @@ local on_attach = function(client, bufnr)
         ["r"] = { "<cmd>lua require('telescope.builtin').lsp_references()<CR>", "List references" },
     }, { prefix = "g" })
 
-    --Map function and class text objects
-    --NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-    -- wk.register({
-        -- TODO ["if"] = { "<Plug>(coc-funcobj-i)", "Inside function" },
-        -- TODO ["af"] = { "<Plug>(coc-funcobj-a)", "Around function" },
-        -- TODO ["ic"] = { "<Plug>(coc-classobj-i)", "Inside class" },
-        -- TODO ["ac"] = { "<Plug>(coc-classobj-a)", "Around class" },
-    -- }, { mode = "x" })
-
-    -- wk.register({
-        -- TODO ["if"] = { "<Plug>(coc-funcobj-i)", "Inside function" },
-        -- TODO ["af"] = { "<Plug>(coc-funcobj-a)", "Around function" },
-        -- TODO ["ic"] = { "<Plug>(coc-classobj-i)", "Inside class" },
-        -- TODO ["ac"] = { "<Plug>(coc-classobj-a)", "Around class" },
-    -- }, { mode = "o" })
-
     --Code action bindings with <leader>+c.
     wk.register({
         name = "+code",
