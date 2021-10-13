@@ -10,7 +10,7 @@ vim.opt.relativenumber = true                   -- Enable line numbers.
 vim.opt.wildmode = 'longest,list'               -- Enable bash-like tab completions.
 vim.opt.foldmethod = 'marker'                   -- Define folds with three braces in a comment.
 vim.opt.termguicolors = true                    -- Enable full GUI colours in the terminal.
-vim.opt.guifont = 'FiraCode Nerd Font Retina'   -- Set the font for the GUI vim.
+vim.opt.guifont = 'Fira Mono:sb:h11'            -- Set the font for the GUI vim.
 vim.opt.mouse = 'a'                             -- Enable the mouse for all modes.
 vim.opt.clipboard:append('unnamedplus')         -- Use the system clipboard.
 vim.opt.scrolloff = 4                           -- Context lines around cursor when scrolling.
