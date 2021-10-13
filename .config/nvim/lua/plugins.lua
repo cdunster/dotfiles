@@ -54,6 +54,11 @@ return require("packer").startup(function()
         },
         config = require("config.cmp").config(),
     }
+    -- Persistent Terminals
+    use {
+        "akinsho/toggleterm.nvim",
+        config = require("config.toggleterm").config(),
+    }
     -- LSP
     use {
         "neovim/nvim-lspconfig",
@@ -63,18 +68,11 @@ return require("packer").startup(function()
         },
         config = require("config.lsp").config(),
     }
-    -- Floating terminal in Vim.
-    use {
-        "voldikss/vim-floaterm",
-        config = require("config.floaterm").config(),
-    }
     -- Start Screen.
     use {
         "mhinz/vim-startify",
         config = require("config.startify").config(),
     }
-    -- Open LazyGit in a floating window.
-    use "kdheepak/lazygit.nvim"
     -- Git commands.
     use "tpope/vim-fugitive"
     -- Better Rust support. Uses Syntastic for highlighting.

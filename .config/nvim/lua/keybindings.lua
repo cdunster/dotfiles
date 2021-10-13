@@ -42,7 +42,7 @@ wk.register({
 
     ["d"] = {
         name = "+dotfiles",
-        ["g"] = { "<cmd>FloatermNew lazygit -w ~ -g ~/.cfg<cr>", "Open lazygit in dotfiles dir" },
+        ["g"] = { "<cmd>lua toggle_config_git()<CR>", "Open lazygit in dotfiles dir" },
         ["f"] = { "<cmd>lua require('telescope.builtin').find_files({ cwd = '~/.config' })<cr>", "Find a dotfile" },
         ["n"] = {
             name = "+neovim",
@@ -54,7 +54,7 @@ wk.register({
 
     ["g"] = {
         name = "+git",
-        ["g"] = { "<cmd>LazyGit<cr>", "Open floating lazygit for working dir" },
+        ["g"] = { "<cmd>lua toggle_lazygit()<CR>", "Open floating lazygit for working dir" },
         ["s"] = { "<cmd>Git<cr>", "Git status" },
         ["b"] = { "<cmd>Git blame<cr>", "Git blame this file" },
         ["d"] = { "<cmd>Gdiffsplit<cr>", "Git diff all changes" },
@@ -64,12 +64,5 @@ wk.register({
             ["m"] = { "<cmd>GMove<cr>", "Git move file" },
             ["d"] = { "<cmd>GDelete<cr>", "Git delete file" },
         },
-    },
-
-    ["t"] = {
-        name = "+terminal",
-        ["n"] = { "<cmd>terminal<cr>", "Create new terminal buffer" },
-        ["f"] = { "<cmd>FloatermNew<cr>", "Create new floating terminal" },
-        ["b"] = { "<cmd>FloatermNew --wintype=split --height=0.2<cr>", "Create new terminal on the bottom" },
     },
 }, { prefix = "<leader>" })
