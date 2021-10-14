@@ -24,7 +24,13 @@ end
 M.config = function()
     require("toggleterm").setup({
         open_mapping = [[<C-\>]],
+        hide_numbers = true,
+        start_in_insert = true,
+        close_on_exit = true,
     })
+
+    -- Enable the Telescope extension for listing terminals.
+    require('telescope').load_extension("termfinder")
 
     -- Add bindings for when in a terminal.
     vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
@@ -36,6 +42,7 @@ M.config = function()
 
     wk.register({
         name = "+terminal",
+        ["t"] = { "<cmd>Telescope termfinder find<CR>", "List open terminals" },
         ["n"] = { "<cmd>1ToggleTerm<CR>", "New terminal" }, -- A count of '1' before the command creates a new terminal.
         ["a"] = { "<cmd>ToggleTermCloseAll<CR>", "Close all terminals" },
         ["A"] = { "<cmd>ToggleTermOpenAll<CR>", "Open all terminals" },

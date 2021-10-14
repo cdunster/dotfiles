@@ -57,6 +57,11 @@ return require("packer").startup(function()
     -- Persistent Terminals
     use {
         "akinsho/toggleterm.nvim",
+        requires = {
+            -- Telescope picker for ToggleTerm
+            "tknightz/telescope-termfinder.nvim",
+            "nvim-telescope/telescope.nvim",
+        },
         config = require("config.toggleterm").config(),
     }
     -- LSP
