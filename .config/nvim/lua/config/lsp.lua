@@ -2,6 +2,7 @@ local M = {}
 local servers = { 'clangd' }
 
 local on_attach = function(client, bufnr)
+    require("lsp_signature").on_attach() -- Enable LSP signature plugin.
     local wk = require("which-key")
 
     --Use K to show documentation in preview window.

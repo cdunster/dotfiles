@@ -70,6 +70,7 @@ return require("packer").startup(function()
         requires = {
             "hrsh7th/nvim-cmp",
             "hrsh7th/cmp-nvim-lsp",
+            "ray-x/lsp_signature.nvim",
         },
         config = require("config.lsp").config(),
     }
