@@ -6,9 +6,9 @@ M.config = function()
     local cmp = require("cmp")
     cmp.setup({
         snippet = {
-        expand = function(args)
-            vim.fn["vsnip#anonymous"](args.body)
-        end,
+            expand = function(args)
+                vim.fn["vsnip#anonymous"](args.body)
+            end,
         },
         mapping = {
             ["<C-space>"] = cmp.mapping.complete(),
@@ -20,6 +20,7 @@ M.config = function()
             -- These are in order of priority. (Top source shown first).
             { name = 'nvim_lsp' },
             { name = 'vsnip' },
+            { name = "crates" },
             { name = "path" },
             { name = "buffer" },
             { name = "spell" },

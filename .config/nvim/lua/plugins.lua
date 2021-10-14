@@ -85,6 +85,13 @@ return require("packer").startup(function()
     use "rust-lang/rust.vim"
     -- Advanced syntax highlighting.
     use "vim-syntastic/syntastic"
+    -- Rust crate manager.
+    use {
+        "Saecki/crates.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim"
+        },
+    }
     -- Dart language support.
     use "dart-lang/dart-vim-plugin"
     -- Flutter support with commands.
