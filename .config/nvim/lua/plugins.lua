@@ -118,5 +118,13 @@ return require("packer").startup(function()
     use "junegunn/seoul256.vim"
     -- PICO-8 support.
     use "Bakudankun/PICO-8.vim"
+    -- Git in the gutter.
+    use {
+        "lewis6991/gitsigns.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+        config = require("config.gitsigns").config(),
+    }
 end)
 
