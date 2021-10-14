@@ -12,6 +12,11 @@ function toggle_lazygit()
     lazygit:toggle()
 end
 
+function new_vertical_term()
+    local width = vim.api.nvim_win_get_width(0)
+    Terminal:new({ direction = "vertical" }):toggle(width / 2)
+end
+
 function _G.set_terminal_keymaps()
     local opts = { noremap = true }
     vim.api.nvim_buf_set_keymap(0, 't', '<ESC>', [[<C-\><C-n>]], opts)
@@ -44,6 +49,9 @@ M.config = function()
         name = "+terminal",
         ["t"] = { "<cmd>Telescope termfinder find<CR>", "List open terminals" },
         ["n"] = { "<cmd>1ToggleTerm<CR>", "New terminal" }, -- A count of '1' before the command creates a new terminal.
+        ["v"] = { "<cmd>lua new_vertical_term()<CR>", "New terminal in a vertical split" },
+        ["T"] = { "<cmd>1ToggleTerm direction=tab<CR>", "New terminal in a new tab" }, -- A count of '1' before the command creates a new terminal.
+        ["f"] = { "<cmd>1ToggleTerm direction=float<CR>", "New floating terminal" }, -- A count of '1' before the command creates a new terminal.
         ["a"] = { "<cmd>ToggleTermCloseAll<CR>", "Close all terminals" },
         ["A"] = { "<cmd>ToggleTermOpenAll<CR>", "Open all terminals" },
     }, { prefix = "<leader>t" })
