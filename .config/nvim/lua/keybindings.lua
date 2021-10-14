@@ -10,6 +10,10 @@ wk.register({
     --Fix the Y keybinding.
     ["Y"] = { "y$", "Yank to end of line" },
 
+    -- Move lines up and down.
+    ["<M-j>"] = { "<cmd>m+<CR>", "Move current line down one" },
+    ["<M-k>"] = { "<cmd>m-2<CR>", "Move current line up one" },
+
     --Window navigation with Ctrl and navigation keys.
     ["<C-h>"] = { "<C-w>h", "Go to window on the left" },
     ["<C-j>"] = { "<C-w>j", "Go to window below" },
