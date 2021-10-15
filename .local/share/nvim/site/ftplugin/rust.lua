@@ -1,12 +1,11 @@
---Format code on save.
-vim.g.rustfmt_autosave = 1
-
 local wk = require("which-key")
 
 --Local/language specific bindings.
 wk.register({
     name = "+Rust lang",
-    ["r"] = { "<cmd>Crun<cr>", "Cargo run" },
-    ["t"] = { "<cmd>Ctest<cr>", "Cargo test" },
-    ["T"] = { "<cmd>RustTest<cr>", "Run test under cursor" },
+    ["r"] = { "<cmd>lua require('rust-tools.runnables').runnables()<cr>", "List Rust runnables" },
+    ["d"] = { "<cmd>lua require('rust-tools.debuggables').debuggables()<cr>", "List Rust debuggables" },
+    ["e"] = { "<cmd>lua require('rust-tools.expand_macro').expand_macro()<cr>", "Recursively expand macro" },
+    ["o"] = { "<cmd>lua require('rust-tools.open_cargo_toml').open_cargo_toml()<cr>", "Open Cargo.toml" },
+    ["J"] = { "<cmd>lua require('rust-tools.join_lines').join_lines()<cr>", "Join lines" },
 }, { prefix = "<localleader>", buffer = 0 })

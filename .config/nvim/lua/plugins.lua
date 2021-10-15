@@ -78,13 +78,10 @@ return require("packer").startup(function()
             "hrsh7th/nvim-cmp",
             "hrsh7th/cmp-nvim-lsp",
             "ray-x/lsp_signature.nvim",
+            "simrat39/rust-tools.nvim",
         },
         config = require("config.lsp").config(),
     }
-    -- Better Rust support. Uses Syntastic for highlighting.
-    use "rust-lang/rust.vim"
-    -- Advanced syntax highlighting.
-    use "vim-syntastic/syntastic"
     -- Rust crate manager.
     use {
         "Saecki/crates.nvim",

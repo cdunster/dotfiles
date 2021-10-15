@@ -1,5 +1,4 @@
 local M = {}
-local servers = { "clangd" }
 
 local on_attach = function(client, bufnr)
     require("lsp_signature").on_attach() -- Enable LSP signature plugin.
@@ -41,18 +40,29 @@ local on_attach = function(client, bufnr)
 end
 
 M.config = function()
+    -- Additional LSP functionality for Rust.
+    require('rust-tools').setup()
+
     -- Add additional capabilities supported by nvim-cmp
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
+    local servers = { "clangd", "rust_analyzer" }
     for _, lsp in ipairs(servers) do
-        require("lspconfig")[lsp].setup {
+        require("lspconfig")[lsp].setup({
             on_attach = on_attach,
             capabilities = capabilities,
             flags = {
                 debounce_text_changes = 150,
-            }
-        }
+            },
+            settings = {
+                ["rust-analyzer"] = {
+                    checkOnSave = {
+                        command = "clippy"
+                    },
+                },
+            },
+        })
     end
 end
 
