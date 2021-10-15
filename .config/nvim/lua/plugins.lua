@@ -13,6 +13,13 @@ end
 return require("packer").startup(function()
     -- Packer can manage itself.
     use "wbthomason/packer.nvim"
+    -- Start Screen.
+    use {
+        "mhinz/vim-startify",
+        config = require("config.startify").config(),
+    }
+    -- Git commands.
+    use "tpope/vim-fugitive"
     -- Which Key.
     use {
         "folke/which-key.nvim",
@@ -74,13 +81,6 @@ return require("packer").startup(function()
         },
         config = require("config.lsp").config(),
     }
-    -- Start Screen.
-    use {
-        "mhinz/vim-startify",
-        config = require("config.startify").config(),
-    }
-    -- Git commands.
-    use "tpope/vim-fugitive"
     -- Better Rust support. Uses Syntastic for highlighting.
     use "rust-lang/rust.vim"
     -- Advanced syntax highlighting.
