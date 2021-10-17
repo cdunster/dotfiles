@@ -89,6 +89,15 @@ return require("packer").startup(function()
             "nvim-lua/plenary.nvim"
         },
     }
+    -- Debugging in Neovim with a nice UI and in-line variable evaluation.
+    use {
+        "mfussenegger/nvim-dap",
+        requires = {
+            "rcarriga/nvim-dap-ui",
+            "theHamsta/nvim-dap-virtual-text",
+        },
+        config = require("config.dap").config(),
+    }
     -- Dart language support.
     use "dart-lang/dart-vim-plugin"
     -- Flutter support with commands.
@@ -97,11 +106,6 @@ return require("packer").startup(function()
     use {
         "vimwiki/vimwiki",
         config = require("config.vimwiki").config(),
-    }
-    -- For debugging programmes in Neovim.
-    use {
-        "puremourning/vimspector",
-        config = require("config.vimspector").config(),
     }
     -- Comment-out lines.
     use {
