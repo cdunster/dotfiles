@@ -135,5 +135,13 @@ return require("packer").startup(function()
         },
         config = require("config.gitsigns").config(),
     }
+    -- Manage git worktrees.
+    use {
+        "ThePrimeagen/git-worktree.nvim",
+        requires = {
+            "nvim-telescope/telescope.nvim",
+        },
+        config = require("config.gitworktrees").config(),
+    }
 end)
 
