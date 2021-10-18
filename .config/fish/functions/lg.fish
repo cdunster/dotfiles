@@ -1,4 +1,1 @@
-function lg
-    lazygit
-end
-
+alias lg="lazygit"
