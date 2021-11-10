@@ -121,6 +121,8 @@ return require("packer").startup(function()
             })
         end
     }
+    -- Fix colour schemes to work with LSP colour groups.
+    use "folke/lsp-colors.nvim"
     -- Gruvbox colour scheme.
     use "morhetz/gruvbox"
     -- Seoul 256 colour scheme.
