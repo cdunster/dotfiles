@@ -143,5 +143,7 @@ return require("packer").startup(function()
         },
         config = require("config.gitworktrees").config(),
     }
+    -- Support creating Nix configurations.
+    use "LnL7/vim-nix"
 end)
 
