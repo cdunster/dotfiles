@@ -11,3 +11,6 @@ vim.api.nvim_exec([[
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 ]], false)
+
+-- Format Rust files on save.
+vim.api.nvim_command[[autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)]]
