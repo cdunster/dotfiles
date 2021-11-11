@@ -41,8 +41,8 @@ M.config = function()
     -- Add a UI to navigate DAP.
     require("dapui").setup()
 
-    -- Enable debug virtual text.
-    vim.g.dap_virtual_text = true
+    -- Show parameter values as virtual text when debugging.
+    require("nvim-dap-virtual-text").setup()
 
     local wk = require("which-key")
     wk.register({
