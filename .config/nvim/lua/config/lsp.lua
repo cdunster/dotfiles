@@ -40,9 +40,6 @@ local on_attach = function(client, bufnr)
 end
 
 M.config = function()
-    -- Additional LSP functionality for Rust.
-    require('rust-tools').setup()
-
     -- Add additional capabilities supported by nvim-cmp
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)

@@ -78,9 +78,22 @@ return require("packer").startup(function()
             "hrsh7th/nvim-cmp",
             "hrsh7th/cmp-nvim-lsp",
             "ray-x/lsp_signature.nvim",
-            "simrat39/rust-tools.nvim",
         },
         config = require("config.lsp").config(),
+    }
+    -- Advanced LSP functionality for Rust.
+    use {
+        "simrat39/rust-tools.nvim",
+        requires = {
+            "neovim/nvim-lspconfig",
+            "nvim-lua/popup.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+            "mfussenegger/nvim-dap",
+        },
+        config = function()
+            require("rust-tools").setup()
+        end
     }
     -- Rust crate manager.
     use {
