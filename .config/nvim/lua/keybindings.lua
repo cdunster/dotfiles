@@ -61,6 +61,7 @@ wk.register({
         ["l"] = { "<cmd>lua toggle_lazygit()<CR>", "Open floating lazygit for working dir" },
         ["g"] = { "<cmd>Git<cr>", "Git status" },
         ["d"] = { "<cmd>Gdiffsplit<cr>", "Git diff all changes" },
+        ["b"] = { "<cmd>Git blame<cr>", "Git blame file" },
         ["f"] = {
             name = "+file",
             ["r"] = { "<cmd>GRename<cr>", "Git rename file" },

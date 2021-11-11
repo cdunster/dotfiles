@@ -27,7 +27,6 @@ M.config = function()
         ["r"] = { "<cmd>lua require('gitsigns').reset_hunk()<CR>", "Reset current hunk" },
         ["R"] = { "<cmd>lua require('gitsigns').reset_buffer()<CR>", "Reset current buffer" },
         ["p"] = { "<cmd>lua require('gitsigns').preview_hunk()<CR>", "Preview current hunk" },
-        ["b"] = { "<cmd>lua require('gitsigns').blame_line()<CR>", "Blame current line" },
     }, { prefix = "<leader>g" })
 
     wk.register({
