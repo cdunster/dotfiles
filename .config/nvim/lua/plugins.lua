@@ -160,5 +160,7 @@ return require("packer").startup(function()
     }
     -- Support creating Nix configurations.
     use "LnL7/vim-nix"
+    -- Better motions for words i.e. camelCase, snake_case, etc.
+    use "chaoren/vim-wordmotion"
 end)
 
