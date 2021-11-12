@@ -162,5 +162,10 @@ return require("packer").startup(function()
     use "LnL7/vim-nix"
     -- Better motions for words i.e. camelCase, snake_case, etc.
     use "chaoren/vim-wordmotion"
+    -- Better spellchecking (supports camelCase, snake_case, etc.).
+    use {
+        "kamykn/spelunker.vim",
+        config = require("config.spelunker").config(),
+    }
 end)
 

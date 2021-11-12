@@ -14,7 +14,7 @@ vim.opt.guifont = 'Fira Mono:sb:h12'            -- Set the font for the GUI vim.
 vim.opt.mouse = 'a'                             -- Enable the mouse for all modes.
 vim.opt.clipboard:append('unnamedplus')         -- Use the system clipboard.
 vim.opt.scrolloff = 4                           -- Context lines around cursor when scrolling.
-vim.opt.spell = true                            -- Enable spell checking.
+vim.opt.spell = false                           -- Disable spell checking (use spelunker plugin instead).
 vim.opt.spelllang = 'en_gb'                     -- Enable spell checking.
 vim.opt.list = true                             -- Enable list mode which shows characters instead of whitespace.
 vim.opt.lcs:append('space:·')                   -- Show whitespace characters.
