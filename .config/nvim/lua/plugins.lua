@@ -134,12 +134,6 @@ return require("packer").startup(function()
             })
         end
     }
-    -- Fix colour schemes to work with LSP colour groups.
-    use "folke/lsp-colors.nvim"
-    -- Gruvbox colour scheme.
-    use "morhetz/gruvbox"
-    -- Seoul 256 colour scheme.
-    use "junegunn/seoul256.vim"
     -- PICO-8 support.
     use "Bakudankun/PICO-8.vim"
     -- Git in the gutter.
@@ -167,5 +161,12 @@ return require("packer").startup(function()
         "kamykn/spelunker.vim",
         config = require("config.spelunker").config(),
     }
+
+    -- Colourschemes
+    use "morhetz/gruvbox"
+    use "franbach/miramare"
+    use "sainnhe/everforest"
+    -- Fix colour schemes to work with LSP colour groups.
+    use "folke/lsp-colors.nvim"
 end)
 

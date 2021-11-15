@@ -39,5 +39,4 @@ vim.env.TERM = 'alacritty'
 vim.cmd('syntax on')                -- Enable syntax highlighting.
 vim.opt.cursorline = true           -- Highlight the line the cursor is on.
 vim.opt.background = 'dark'         -- Set the colourscheme background to light-mode.
-vim.cmd('colorscheme gruvbox')      -- Set the colorscheme.
-
+vim.cmd('colorscheme everforest')   -- Set the colorscheme.
