@@ -4,6 +4,22 @@ vim.g.mapleader = " "
 --Set the comma key to the local leader key for custom commands.
 vim.g.maplocalleader = ","
 
+-- Helper functions.
+_G.git_move = function()
+    local current_name = vim.api.nvim_buf_get_name(0)
+    local new_name = vim.fn.input("Move to: ", current_name, "file")
+    if new_name ~= "" then
+        vim.cmd("GMove " .. new_name)
+    end
+end
+
+_G.git_rename = function()
+    local new_name = vim.fn.input("New name: ", "", "file")
+    if new_name ~= "" then
+        vim.cmd("GRename " .. new_name)
+    end
+end
+
 local wk = require("which-key")
 
 wk.register({
@@ -64,8 +80,8 @@ wk.register({
         ["b"] = { "<cmd>Git blame<cr>", "Git blame file" },
         ["f"] = {
             name = "+file",
-            ["r"] = { "<cmd>GRename<cr>", "Git rename file" },
-            ["m"] = { "<cmd>GMove<cr>", "Git move file" },
+            ["r"] = { "<cmd>lua git_rename()<cr>", "Git rename file" },
+            ["m"] = { "<cmd>lua git_move()<cr>", "Git move file" },
             ["d"] = { "<cmd>GDelete<cr>", "Git delete file" },
         },
     },
