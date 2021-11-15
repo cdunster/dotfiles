@@ -1,10 +1,11 @@
 local M = {}
 
 M.config = function()
-    -- Maybe these to change the highlight style?
-    -- " Override highlight setting.
-    -- highlight SpelunkerSpellBad cterm=underline ctermfg=247 gui=underline guifg=#9e9e9e
-    -- highlight SpelunkerComplexOrCompoundWord cterm=underline ctermfg=NONE gui=underline guifg=NONE
+
+    -- Override highlight setting.
+    vim.cmd[[highlight SpelunkerSpellBad cterm=undercurl ctermfg=LightRed gui=undercurl guisp=LightRed]]
+    vim.cmd[[highlight SpelunkerComplexOrCompoundWord cterm=undercurl ctermfg=LightRed gui=undercurl guisp=LightRed]]
+
     local wk = require("which-key")
     wk.register({
         name = "+spelunker",
