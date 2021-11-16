@@ -2,6 +2,9 @@ local M = {}
 
 M.config = function()
 
+    -- Check spelling in buffer after pause instead of read/write.
+    vim.g.spelunker_check_type = 2
+
     -- Override highlight setting.
     vim.cmd[[highlight SpelunkerSpellBad cterm=undercurl ctermfg=LightRed gui=undercurl guisp=LightRed]]
     vim.cmd[[highlight SpelunkerComplexOrCompoundWord cterm=undercurl ctermfg=LightRed gui=undercurl guisp=LightRed]]
