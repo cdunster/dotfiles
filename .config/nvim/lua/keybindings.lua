@@ -78,6 +78,7 @@ wk.register({
         ["g"] = { "<cmd>Git<cr>", "Git status" },
         ["d"] = { "<cmd>Gdiffsplit<cr>", "Git diff all changes" },
         ["b"] = { "<cmd>Git blame<cr>", "Git blame file" },
+        ["P"] = { "<cmd>Git push<cr>", "Git push" },
         ["f"] = {
             name = "+file",
             ["r"] = { "<cmd>lua git_rename()<cr>", "Git rename file" },
