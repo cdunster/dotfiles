@@ -176,29 +176,53 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Seoul dark)
+# Colors (Everforest dark soft)
 colors:
   primary:
-    background: '0x4b4b4b'
-    foreground: '0xd0d0d0'
+    background: '#323d43'
+    foreground: '#d3c6aa'
   normal:
-    black:    '0x3a3a3a'
-    red:      '0xd68787'
-    green:    '0x5f865f'
-    yellow:   '0xd8af5f'
-    blue:     '0x85add4'
-    magenta:  '0xd7afaf'
-    cyan:     '0x87afaf'
-    white:    '0xd0d0d0'
+    black:   '#4b565c'
+    red:     '#e67e80'
+    green:   '#a7c080'
+    yellow:  '#dbbc7f'
+    blue:    '#7fbbb3'
+    magenta: '#d699b6'
+    cyan:    '#83c092'
+    white:   '#d3c6aa'
   bright:
-    black:    '0x626262'
-    red:      '0xd75f87'
-    green:    '0x87af87'
-    yellow:   '0xffd787'
-    blue:     '0xadd4fb'
-    magenta:  '0xffafaf'
-    cyan:     '0x87d7d7'
-    white:    '0xe4e4e4'
+    black:   '#4b565c'
+    red:     '#e67e80'
+    green:   '#a7c080'
+    yellow:  '#dbbc7f'
+    blue:    '#7fbbb3'
+    magenta: '#d699b6'
+    cyan:    '#83c092'
+    white:   '#d3c6aa'
+
+# Colors (Seoul dark)
+# colors:
+#   primary:
+#     background: '0x4b4b4b'
+#     foreground: '0xd0d0d0'
+#   normal:
+#     black:    '0x3a3a3a'
+#     red:      '0xd68787'
+#     green:    '0x5f865f'
+#     yellow:   '0xd8af5f'
+#     blue:     '0x85add4'
+#     magenta:  '0xd7afaf'
+#     cyan:     '0x87afaf'
+#     white:    '0xd0d0d0'
+#   bright:
+#     black:    '0x626262'
+#     red:      '0xd75f87'
+#     green:    '0x87af87'
+#     yellow:   '0xffd787'
+#     blue:     '0xadd4fb'
+#     magenta:  '0xffafaf'
+#     cyan:     '0x87d7d7'
+#     white:    '0xe4e4e4'
 
 # # Colors (Gruvbox light)
 # colors:
