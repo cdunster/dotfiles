@@ -91,9 +91,7 @@ return require("packer").startup(function()
             "nvim-telescope/telescope.nvim",
             "mfussenegger/nvim-dap",
         },
-        config = function()
-            require("rust-tools").setup()
-        end
+        config = require("rust-tools").setup(),
     }
     -- Rust crate manager.
     use {
