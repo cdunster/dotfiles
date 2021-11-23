@@ -44,23 +44,35 @@ M.config = function()
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
-    local servers = { "clangd", "rust_analyzer" }
-    for _, lsp in ipairs(servers) do
-        require("lspconfig")[lsp].setup({
-            on_attach = on_attach,
-            capabilities = capabilities,
-            flags = {
-                debounce_text_changes = 150,
-            },
-            settings = {
-                ["rust-analyzer"] = {
-                    checkOnSave = {
-                        command = "clippy"
-                    },
+    -- Common flags for all LSP configurations.
+    local flags = {
+        debounce_text_changes = 150,
+    }
+
+    local lsp = require("lspconfig")
+
+    -- clangd LSP config for C/C++.
+    lsp.clangd.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        -- Override project root to work around subproject weirdness.
+        root_dir = lsp.util.root_pattern("compile_commands.json", "compile_flags.txt", "build/compile_commands.json") or dirname,
+        flags = flags,
+    })
+
+    -- rust_analyzer LSP config for Rust.
+    lsp.rust_analyzer.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        flags = flags,
+        settings = {
+            ["rust-analyzer"] = {
+                checkOnSave = {
+                    command = "clippy"
                 },
             },
-        })
-    end
+        },
+    })
 end
 
 return M
