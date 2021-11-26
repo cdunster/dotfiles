@@ -46,6 +46,7 @@ M.config = function()
 
     local wk = require("which-key")
     wk.register({
+        name = "+code",
         ["d"] = { "<cmd>lua require('dapui').open()<CR>", "Open debugger" },
         ["D"] = { "<cmd>lua require('dap').close() require('dapui').close()<CR>", "Open debugger" },
         ["b"] = { "<cmd>lua require('dap').toggle_breakpoint()<CR>", "Toggle breakpoint" },
@@ -53,6 +54,7 @@ M.config = function()
     }, { prefix = "<leader>c" })
 
     wk.register({
+        name = "+code",
         ["v"] = { "<cmd>lua require('dapui').eval()<CR>", "Evaluate expression" },
     }, { mode = "v", prefix = "<leader>c" })
 
