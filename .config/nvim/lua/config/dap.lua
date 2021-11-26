@@ -49,7 +49,6 @@ M.config = function()
         name = "+code",
         ["d"] = { "<cmd>lua require('dapui').open()<CR>", "Open debugger" },
         ["D"] = { "<cmd>lua require('dap').close() require('dapui').close()<CR>", "Open debugger" },
-        ["b"] = { "<cmd>lua require('dap').toggle_breakpoint()<CR>", "Toggle breakpoint" },
         ["v"] = { "<cmd>lua require('dapui').eval()<CR>", "Evaluate expression" },
     }, { prefix = "<leader>c" })
 
@@ -60,6 +59,7 @@ M.config = function()
 
     wk.register({
         ["<F5>"] = { "<cmd>lua require('dap').continue()<CR>", "Debug continue" },
+        ["<F9>"] = { "<cmd>lua require('dap').toggle_breakpoint()<CR>", "Toggle breakpoint" },
         ["<F10>"] = { "<cmd>lua require('dap').step_over()<CR>", "Debug step over" },
         ["<F11>"] = { "<cmd>lua require('dap').step_into()<CR>", "Debug step into" },
     })
