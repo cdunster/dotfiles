@@ -21,6 +21,7 @@ M.config = function()
     }, { mode = "x" })
 
     wk.register({
+        name = "+git",
         ["s"] = { "<cmd>lua require('gitsigns').stage_hunk()<CR>", "Stage current hunk" },
         ["S"] = { "<cmd>lua require('gitsigns').stage_buffer()<CR>", "Stage current buffer" },
         ["u"] = { "<cmd>lua require('gitsigns').undo_stage_hunk()<CR>", "Undo staging last hunk" },
@@ -30,6 +31,7 @@ M.config = function()
     }, { prefix = "<leader>g" })
 
     wk.register({
+        name = "+git",
         ["s"] = { "<cmd>lua require('gitsigns').stage_hunk({vim.fn.line('.'), vim.fn.line('v')})<CR>", "Stage selected hunk(s)" },
         ["r"] = { "<cmd>lua require('gitsigns').reset_hunk({vim.fn.line('.'), vim.fn.line('v')})<CR>", "Reset selected hunk(s)" },
     }, { mode = "v", prefix = "<leader>g" })
